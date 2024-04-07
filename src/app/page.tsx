@@ -50,10 +50,12 @@ But don’t just take our word for it, hear from some of our users on what they 
 	}
 ]
 
-export default async function Page() {
-	const res = await fetch("https://internal.buape.com/staff")
+async function getData() {
+	const res = await fetch("https://internal.buape.com/staff", {
+		next: { revalidate: 3600 }
+	})
 	if (res.ok) {
-		const staffList = (await res.json()) as {
+		return (await res.json()) as {
 			data: {
 				staff: {
 					id: string
@@ -64,6 +66,12 @@ export default async function Page() {
 				}[]
 			}
 		}
+	}
+}
+
+export default async function Page() {
+	const staffList = await getData()
+	if (staffList)
 		sections.push({
 			id: "staff",
 			title: "The Team Behind the Screen",
@@ -77,7 +85,7 @@ export default async function Page() {
 				}
 			})
 		})
-	}
+
 	return (
 		<div>
 			<HeroBackground />
