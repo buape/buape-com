@@ -63,8 +63,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@t3-oss/env-core':
-        specifier: ^0.10.0
-        version: 0.10.0(typescript@5.4.5)(zod@3.23.3)
+        specifier: ^0.10.1
+        version: 0.10.1(typescript@5.4.5)(zod@3.23.3)
       '@t3-oss/env-nextjs':
         specifier: 0.10.0
         version: 0.10.0(typescript@5.4.5)(zod@3.23.3)
@@ -1921,6 +1921,15 @@ packages:
 
   '@t3-oss/env-core@0.10.0':
     resolution: {integrity: sha512-2NJM7kBPYfxkvLSt0cX4UnQR3YMNOoqHKUWEEbxrqad0R1eqj1j2ZxU4HByQzYW8tBUD+kCSd00xJPoju/WJ1Q==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@t3-oss/env-core@0.10.1':
+    resolution: {integrity: sha512-GcKZiCfWks5CTxhezn9k5zWX3sMDIYf6Kaxy2Gx9YEQftFcz8hDRN56hcbylyAO3t4jQnQ5ifLawINsNgCDpOg==}
     peerDependencies:
       typescript: '>=5.0.0'
       zod: ^3.0.0
@@ -6163,6 +6172,12 @@ snapshots:
       tslib: 2.6.2
 
   '@t3-oss/env-core@0.10.0(typescript@5.4.5)(zod@3.23.3)':
+    dependencies:
+      zod: 3.23.3
+    optionalDependencies:
+      typescript: 5.4.5
+
+  '@t3-oss/env-core@0.10.1(typescript@5.4.5)(zod@3.23.3)':
     dependencies:
       zod: 3.23.3
     optionalDependencies:
