@@ -13,7 +13,7 @@ export default {
 			hostname: "*.stattrack.dev"
 		}, {
 			protocol: "https",
-			hostname: "*.jt-99.net"
+			hostname: "jt-99.net"
 		}, {
 			protocol: "https",
 			hostname: "cdn.discordapp.com"

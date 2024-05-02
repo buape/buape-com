@@ -17,17 +17,20 @@ const sections: ContentSectionData[] = [
 			{
 				name: "Kiai",
 				icon: "https://cdn-raw.buape.com/kiai.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum"
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://kiai.app"
 			},
 			{
 				name: "JT-99",
 				icon: "https://jt-99.net/images/jt99.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum"
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://jt-99.net"
 			},
 			{
 				name: "Bolt",
 				icon: "https://cdn-raw.buape.com/bolt.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum"
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://bolt.buape.com"
 			},
 			{
 				name: "Sync",
@@ -37,7 +40,8 @@ const sections: ContentSectionData[] = [
 			{
 				name: "StatTrack",
 				icon: "https://cdn-raw.buape.com/stattrack.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum"
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://stattrack.buape.com"
 			}
 		]
 	},
@@ -71,7 +75,7 @@ async function getData() {
 
 export default async function Page() {
 	const staffList = await getData()
-	if (staffList)
+	if (staffList && !sections.find(x => x.id === "staff"))
 		sections.push({
 			id: "staff",
 			title: "The Team Behind the Screen",
