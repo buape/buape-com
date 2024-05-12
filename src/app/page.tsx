@@ -3,7 +3,7 @@ import {
 	JoinTheTeam,
 	type ContentSectionData
 } from "./home/Content"
-import { Footer, type FooterLinkSection } from "./home/Footer"
+import { Footer } from "./home/Footer"
 import { HeroBackground, Hero } from "./home/Hero"
 import { footerLinks } from "~/lib/data"
 
@@ -50,7 +50,29 @@ const sections: ContentSectionData[] = [
 		title: "We Do It Best",
 		description: `x+ communities, y+ users.
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
-		cards: []
+		cards: [
+			{
+				name: "Kiai",
+				icon: "https://cdn-raw.buape.com/kiai.png",
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://kiai.app",
+				linkBottomText: "Join COMMUNITY today"
+			},
+			{
+				name: "Kiai",
+				icon: "https://cdn-raw.buape.com/kiai.png",
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://kiai.app",
+				linkBottomText: "Join COMMUNITY today"
+			},
+			{
+				name: "Kiai",
+				icon: "https://cdn-raw.buape.com/kiai.png",
+				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				link: "https://kiai.app",
+				linkBottomText: "Join COMMUNITY today"
+			}
+		]
 	}
 ]
 
@@ -75,7 +97,7 @@ async function getData() {
 
 export default async function Page() {
 	const staffList = await getData()
-	if (staffList && !sections.find(x => x.id === "staff"))
+	if (staffList && !sections.find((x) => x.id === "staff"))
 		sections.push({
 			id: "staff",
 			title: "The Team Behind the Screen",
@@ -87,7 +109,8 @@ export default async function Page() {
 					name: staff.username || staff.id,
 					body: staff.positions.join(", ")
 				}
-			})
+			}),
+			carousel: true
 		})
 
 	return (

@@ -11,6 +11,7 @@ import Navbar from "./Navbar"
 
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { BreakpointIndicator } from "~/components/BreakpointIndicator"
 
 const font = Rubik({
 	subsets: ["latin"]
@@ -33,6 +34,7 @@ export default async function Layout({
 				<Toaster />
 				<SpeedInsights />
 				<Analytics />
+				<BreakpointIndicator />
 			</body>
 		</html>
 	)

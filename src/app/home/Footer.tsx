@@ -1,3 +1,8 @@
+import {
+	DiscordLogoIcon,
+	GitHubLogoIcon,
+	TwitterLogoIcon
+} from "@radix-ui/react-icons"
 import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
@@ -13,25 +18,43 @@ type FooterLink = {
 
 export function Footer({ data }: { data: FooterLinkSection[] }) {
 	return (
-		<div className="flex flex-col bg-dark w-screen py-20 container gap-5 px-28">
-			<div className="flex flex-row">
-				<div className="flex flex-col gap-2 grow shrink-0">
-					<Image
-						src={"https://cdn.buape.com/buape_circle.png"}
-						width={32}
-						height={32}
-						alt={"Buape Logo"}
-					/>
-					<span className="text-white text-lg font-bold">Buape Studios</span>
-					<span className="text-xs">
-						Made in the USA 🇺🇲 <br />
-						Loved by thousands worldwide 🌎
-					</span>
+		<div className="flex flex-col bg-dark w-screen container gap-5 px-28">
+			<div className="flex flex-col gap-8 mb-4">
+				<div className="flex flex-row py-20">
+					<div className="flex flex-col gap-2 grow shrink-0">
+						<Image
+							src={"https://cdn.buape.com/buape_circle.png"}
+							width={64}
+							height={64}
+							alt={"Buape Logo"}
+						/>
+						<span className="text-white text-2xl font-bold">Buape Studios</span>
+						<span className="text-md">
+							Made in the USA 🇺🇲 <br />
+							Loved by thousands worldwide 🌎
+						</span>
+					</div>
+					<div className="flex flex-row gap-16">
+						{data.map((x) => (
+							<LinkSection data={x} key={x.title} />
+						))}
+					</div>
 				</div>
-				<div className="flex flex-row gap-16">
-					{data.map((x) => (
-						<LinkSection data={x} key={x.title} />
-					))}
+				<div className="align-bottom flex flex-row">
+					<div className="text-neutral-500 grow">
+						© 2024 Buape Studios. All rights reserved.
+					</div>
+					<div className="flex flex-row gap-2">
+						<Link href="https://twitter.com/buapestudios">
+							<TwitterLogoIcon />
+						</Link>
+						<Link href="https://go.buape.com/discord">
+							<DiscordLogoIcon />
+						</Link>
+						<Link href="https://github.com/buape">
+							<GitHubLogoIcon />
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
