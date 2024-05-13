@@ -41,7 +41,7 @@
 		"@vercel/speed-insights": "^1.0.10",
 		"class-variance-authority": "0.7.0",
 		"cmdk": "1.0.0",
-		"csv-stringify": "^6.4.6",
+		"csv-stringify": "^6.5.0",
 		"date-fns": "3.6.0",
 		"dotenv-cli": "^7.4.2",
 		"embla-carousel-autoplay": "^8.0.4",
