@@ -38,7 +38,7 @@
 		"@trpc/react-query": "11.0.0-rc.370",
 		"@trpc/server": "11.0.0-rc.370",
 		"@vercel/analytics": "^1.2.2",
-		"@vercel/speed-insights": "^1.0.10",
+		"@vercel/speed-insights": "^1.0.11",
 		"class-variance-authority": "0.7.0",
 		"cmdk": "1.0.0",
 		"csv-stringify": "^6.5.0",
