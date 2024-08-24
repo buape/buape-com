@@ -10,10 +10,7 @@ export const footerLinks: FooterLinkSection[] = [
 		title: "Projects",
 		links: [
 			{ text: "Kiai", link: "https://kiaibot.com" },
-			{ text: "JT-99", link: "https://jt-99.net" },
-			{ text: "Bolt", link: "https://bolt.buape.com" },
-			{ text: "Sync", link: "#" },
-			{ text: "StatTrack", link: "https://stattrack.dev" }
+			{ text: "JT-99", link: "https://jt-99.net" }
 		]
 	},
 	{
