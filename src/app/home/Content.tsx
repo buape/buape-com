@@ -92,7 +92,7 @@ export function JoinTheTeam() {
 							Submit a project
 						</Button>
 					</Link>
-					<Link href={"https://go.buape.com/discord"} className="w-56">
+					<Link href={"https://discord.gg/7MUYugRj2T"} className="w-56">
 						<Button variant={"outline"} className="w-full">
 							Join Us on Discord
 						</Button>

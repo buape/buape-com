@@ -48,7 +48,7 @@ export function Footer({ data }: { data: FooterLinkSection[] }) {
 						<Link href="https://twitter.com/buapestudios">
 							<TwitterLogoIcon />
 						</Link>
-						<Link href="https://go.buape.com/discord">
+						<Link href="https://discord.gg/7MUYugRj2T">
 							<DiscordLogoIcon />
 						</Link>
 						<Link href="https://github.com/buape">

@@ -23,7 +23,7 @@ export default async function Navbar() {
 							Service Status
 						</Button>
 					</Link>
-					<Link href={"https://go.buape.com/discord"}>
+					<Link href={"https://discord.gg/7MUYugRj2T"}>
 						<Button variant={"nav"}>Join Us on Discord</Button>
 					</Link>
 				</div>
