@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import {
 	ContentSection,
 	JoinTheTeam,
@@ -9,68 +10,57 @@ import { footerLinks } from "~/lib/data"
 
 const sections: ContentSectionData[] = [
 	{
-		id: "mission",
-		title: "Our Mission",
+		id: "projects",
+		title: "Our Projects",
 		description:
 			"We develop both Discord and web applications to help our users manage and enjoy their communities.",
 		cards: [
 			{
 				name: "Kiai",
-				icon: "https://cdn-raw.buape.com/kiai.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				icon: "https://cdn-raw.buape.com/Kiai.png",
+				body: "Kiai is a next generation leveling bot designed for Discord servers who want to level up their community.",
 				link: "https://kiai.app"
 			},
 			{
 				name: "JT-99",
 				icon: "https://jt-99.net/images/jt99.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+				body: "JT-99 is a cross-server chat network with a dedicated team of moderators, designed to provide a safe and welcoming environment for all users.",
 				link: "https://jt-99.net"
-			},
-			{
-				name: "Bolt",
-				icon: "https://cdn-raw.buape.com/bolt.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
-				link: "https://bolt.buape.com"
-			},
-			{
-				name: "Sync",
-				icon: "https://cdn-raw.buape.com/sync.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum"
-			},
-			{
-				name: "StatTrack",
-				icon: "https://cdn-raw.buape.com/stattrack.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
-				link: "https://stattrack.buape.com"
 			}
+			// {
+			// 	name: "Bolt",
+			// 	icon: "https://cdn-raw.buape.com/bolt.png",
+			// 	body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
+			// 	link: "https://bolt.buape.com"
+			// }
 		]
 	},
 	{
 		id: "testimonials",
 		title: "We Do It Best",
-		description: `x+ communities, y+ users.
+		description: `700+ communities, 900,000+ users.
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
 		cards: [
 			{
-				name: "Kiai",
-				icon: "https://cdn-raw.buape.com/kiai.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
-				link: "https://kiai.app",
-				linkBottomText: "Join COMMUNITY today"
+				name: "Shadow",
+				icon: "https://cdn-raw.buape.com/crykitty.png",
+				body: "I've really loved using Kiai in my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
+				link: "#",
+				linkBottomText: "Join Penny Lovers today"
 			},
 			{
-				name: "Kiai",
-				icon: "https://cdn-raw.buape.com/kiai.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
-				link: "https://kiai.app",
-				linkBottomText: "Join COMMUNITY today"
+				name: "Strife",
+				icon: "https://cdn-raw.buape.com/crykitty.png",
+				body: "JT-99 has been a wonderful addition to my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
+				link: "#",
+				linkBottomText: "Join The Void"
 			},
 			{
-				name: "Kiai",
-				icon: "https://cdn-raw.buape.com/kiai.png",
-				body: "Kiai is a next generation leveling bot designed for Discord communities who want to lorem ipsum ipsum lorem lorem ipsum",
-				link: "https://kiai.app",
-				linkBottomText: "Join COMMUNITY today"
+				name: "Codeize",
+				icon: "https://cdn-raw.buape.com/crykitty.png",
+				body: "I've really loved using Kiai in my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
+				link: "#",
+				linkBottomText: "Join Buape Studios"
 			}
 		]
 	}
@@ -95,6 +85,34 @@ async function getData() {
 	}
 }
 
+export const metadata: Metadata = {
+	title: "Buape Studios",
+	description:
+		"Buape Studios is a development studio committed to producing quality applications, as well as empowering and supporting the next generation of developers.",
+	metadataBase:
+		process.env.NODE_ENV === "production"
+			? new URL("https://buape.com")
+			: new URL("http://localhost:3000"),
+	twitter: {
+		card: "summary",
+		title: "Buape Studios",
+		description:
+			"Buape Studios is a development studio committed to producing quality applications, as well as empowering and supporting the next generation of developers.",
+		images: [
+			{
+				url: "https://cdn.buape.com/buape_circle.png",
+				width: 1200,
+				height: 630,
+				alt: "Buape Studios"
+			}
+		]
+	},
+	icons: {
+		icon: "/favicon.ico",
+		apple: "/apple-touch-icon.png"
+	}
+}
+
 export default async function Page() {
 	const staffList = await getData()
 	if (staffList && !sections.find((x) => x.id === "staff"))
@@ -110,7 +128,7 @@ export default async function Page() {
 					body: staff.positions.join(", ")
 				}
 			}),
-			carousel: true
+			marquee: true
 		})
 
 	return (

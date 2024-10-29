@@ -3,15 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { Button } from "~/components/ui/button"
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious
-} from "~/components/ui/carousel"
 import { cn } from "~/lib/utils"
 import type { ClassValue } from "clsx"
+import Marquee from "~/components/ui/marquee"
 
 type ContentCardData = {
 	name: string
@@ -25,12 +19,14 @@ export type ContentSectionData = {
 	title: string
 	description: string
 	cards: ContentCardData[]
-	carousel?: boolean
+	marquee?: boolean
 }
 
 export function ContentSection(data: ContentSectionData) {
+	const firstRow = data.cards.slice(0, data.cards.length / 2)
+	const secondRow = data.cards.slice(data.cards.length / 2)
 	return (
-		<div className="w-screen bg-[#101013] border border-gray py-20 items-center">
+		<section className="w-screen bg-[#101013] border border-gray py-20 items-center">
 			<div
 				className="max-w-full flex flex-col gap-4 text-center items-center justify-center px-24 lg:px-48"
 				id={data.id}
@@ -39,40 +35,42 @@ export function ContentSection(data: ContentSectionData) {
 				<div className="text-white text-lg font-normal whitespace-pre-wrap">
 					{data.description}
 				</div>
-				{!data.carousel ? (
-					<div className="flex flex-wrap flex-row gap-4 justify-center items-center grow mx-6">
+				{!data.marquee ? (
+					<div className="flex flex-wrap md:flex-row flex-col gap-4 justify-center grow mx-6 items-stretch">
 						{data.cards.map((x) => (
 							<ContentCard {...x} key={x.name} />
 						))}
 					</div>
 				) : (
-					<Carousel
-						className="flex flex-wrap flex-row gap-4 justify-center items-center grow mx-6 w-full"
-						opts={{ align: "start", loop: true }}
-					>
-						<CarouselContent>
-							{data.cards.map((x) => (
-								<CarouselItem
-									className="basis-1/2 md:basis-1/3 xl:basis-1/4 2xl:basis-1/5"
-									key={x.name}
-								>
-									<ContentCard {...x} className="h-32" />
-								</CarouselItem>
+					<div className="w-screen overflow-hidden">
+						<Marquee
+							pauseOnHover
+							className="[--duration:40s] flex items-stretch"
+						>
+							{firstRow.map((x) => (
+								<ContentCard {...x} key={x.name} />
 							))}
-						</CarouselContent>
-						<CarouselPrevious />
-						<CarouselNext />
-					</Carousel>
+						</Marquee>
+						<Marquee
+							reverse
+							pauseOnHover
+							className="[--duration:40s] flex items-stretch"
+						>
+							{secondRow.map((x) => (
+								<ContentCard {...x} key={x.name} />
+							))}
+						</Marquee>
+					</div>
 				)}
 			</div>
-		</div>
+		</section>
 	)
 }
 
 export function JoinTheTeam() {
 	return (
 		<div
-			className="w-screen bg-[#101013] border border-gray py-10 mb-10"
+			className="w-screen bg-[#101013] border border-gray p-10 mb-10"
 			id="join-the-team"
 		>
 			<div className="max-w-full flex flex-col gap-4 text-center items-center justify-center">
@@ -81,7 +79,7 @@ export function JoinTheTeam() {
 					We are always looking to expand our talented team and extensive
 					portfolio. Join the team today!
 				</div>
-				<div className="flex flex-row gap-10 justify-center items-center">
+				<div className="flex md:flex-row flex-col md:gap-10 gap-2 justify-center items-center">
 					<Link href={"https://go.buape.com/apply"} className="w-56">
 						<Button variant={"default"} className="w-full">
 							Apply to join us
@@ -107,11 +105,11 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 	return (
 		<div
 			className={cn(
-				"grow p-4 bg-dark rounded-xl border-gray border flex-col flex gap-4 shrink-0 basis-0",
+				"grow p-4 bg-dark rounded-xl border-gray border flex-col flex gap-4 shrink-0 basis-0 w-80",
 				data.className || ""
 			)}
 		>
-			<div className="flex flex-row gap-2 items-center shrink grow-0 order-first">
+			<div className="flex flex-row gap-2 items-center order-first">
 				{data.icon ? (
 					<Image
 						src={data.icon}
@@ -130,7 +128,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 					</Link>
 				) : null}
 			</div>
-			<div className="text-sm text-wrap whitespace-pre-wrap text-center`">
+			<div className="text-md text-wrap whitespace-pre-wrap text-center grow">
 				{data.body}
 			</div>
 			{data.linkBottomText && data.link ? (

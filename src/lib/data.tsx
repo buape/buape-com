@@ -1,26 +1,24 @@
-import {
-	TwitterLogoIcon,
-	DiscordLogoIcon,
-	GitHubLogoIcon
-} from "@radix-ui/react-icons"
+import { BsDiscord } from "react-icons/bs"
+import { FaGithub } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import type { FooterLinkSection } from "~/app/home/Footer"
 
 export const footerLinks: FooterLinkSection[] = [
 	{
 		title: "Projects",
 		links: [
-			{ text: "Kiai", link: "https://kiaibot.com" },
+			{ text: "Kiai", link: "https://kiai.app" },
 			{ text: "JT-99", link: "https://jt-99.net" }
 		]
 	},
-	{
-		title: "Services",
-		links: [
-			{ text: "Private Hosting", link: "#" },
-			{ text: "Bot Development", link: "#" },
-			{ text: "Community Management", link: "#" }
-		]
-	},
+	// {
+	// 	title: "Services",
+	// 	links: [
+	// 		{ text: "Private Hosting", link: "#" },
+	// 		{ text: "Bot Development", link: "#" },
+	// 		{ text: "Community Management", link: "#" }
+	// 	]
+	// },
 	{
 		title: "Legal",
 		links: [
@@ -40,23 +38,23 @@ export const footerLinks: FooterLinkSection[] = [
 			{
 				text: (
 					<span className="flex flex-row gap-2 items-center">
-						<TwitterLogoIcon /> Twitter
+						<FaXTwitter /> Twitter / X
 					</span>
 				),
-				link: "https://twitter.com/buapestudios"
+				link: "https://x.com/buapestudios"
 			},
 			{
 				text: (
 					<span className="flex flex-row gap-2 items-center">
-						<DiscordLogoIcon /> Discord
+						<BsDiscord /> Discord
 					</span>
 				),
-				link: "https://go.buape.com"
+				link: "https://discord.gg/7MUYugRj2T"
 			},
 			{
 				text: (
 					<span className="flex flex-row gap-2 items-center">
-						<GitHubLogoIcon /> GitHub
+						<FaGithub /> GitHub
 					</span>
 				),
 				link: "https://github.com/buape"
