@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
+import { footerLinks } from "~/lib/data"
 import {
 	ContentSection,
-	JoinTheTeam,
-	type ContentSectionData
+	type ContentSectionData,
+	JoinTheTeam
 } from "./home/Content"
 import { Footer } from "./home/Footer"
-import { HeroBackground, Hero } from "./home/Hero"
-import { footerLinks } from "~/lib/data"
+import { Hero, HeroBackground } from "./home/Hero"
 
 const sections: ContentSectionData[] = [
 	{

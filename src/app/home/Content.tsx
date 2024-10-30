@@ -1,11 +1,11 @@
+import type { ClassValue } from "clsx"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { Button } from "~/components/ui/button"
-import { cn } from "~/lib/utils"
-import type { ClassValue } from "clsx"
 import Marquee from "~/components/ui/marquee"
+import { cn } from "~/lib/utils"
 
 type ContentCardData = {
 	name: string

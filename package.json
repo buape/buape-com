@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
-		"pretty": "biome check . --apply --diagnostic-level=warn",
+		"lint": "biome check . --write --diagnostic-level=warn",
 		"start": "next start"
 	},
 	"dependencies": {

@@ -1,9 +1,9 @@
-import { BsDiscord } from "react-icons/bs"
-import { FaGithub } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
 import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
+import { BsDiscord } from "react-icons/bs"
+import { FaGithub } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 
 export type FooterLinkSection = {
 	title: string

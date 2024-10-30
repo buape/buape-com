@@ -4,14 +4,10 @@ import { z } from "zod"
 
 export const env = createEnv({
 	extends: [vercel],
-	shared: {
-	},
-	server: {
-	},
-	client: {
-	},
-	runtimeEnv: {
-	},
+	shared: {},
+	server: {},
+	client: {},
+	runtimeEnv: {},
 	skipValidation:
 		!!process.env.CI ||
 		!!process.env.SKIP_ENV_VALIDATION ||

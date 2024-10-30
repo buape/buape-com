@@ -4,7 +4,7 @@
 		"ignore": [
 			"dist",
 			".next",
-			"generated",
+			"*generated*",
 			"./packages/**/package.json",
 			"./packages/**/tsconfig.json"
 		],
@@ -43,7 +43,7 @@
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded",
-			"trailingComma": "none"
+			"trailingCommas": "none"
 		}
 	}
 }
