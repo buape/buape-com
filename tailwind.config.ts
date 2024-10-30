@@ -1,15 +1,20 @@
-/** @type {import("tailwindcss").Config} */
-module.exports = {
-	darkMode: ["class"],
+import type { Config } from "tailwindcss"
+import { createPreset } from "fumadocs-ui/tailwind-plugin"
+const config: Config = {
 	content: [
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}"
 	],
+	presets: [
+		createPreset({
+			addGlobalColors: true
+		})
+	],
 	theme: {
 		container: {
-			center: "true",
+			center: true,
 			padding: "2rem",
 			screens: {
 				"2xl": "1400px"
@@ -106,3 +111,5 @@ module.exports = {
 	},
 	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")]
 }
+
+export default config

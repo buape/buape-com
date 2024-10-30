@@ -4,6 +4,7 @@ import type { ReactNode } from "react"
 import { BsDiscord } from "react-icons/bs"
 import { FaGithub } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
+import { footerLinks } from "~/lib/data"
 
 export type FooterLinkSection = {
 	title: string
@@ -14,7 +15,7 @@ type FooterLink = {
 	link: string
 }
 
-export function Footer({ data }: { data: FooterLinkSection[] }) {
+export function Footer() {
 	return (
 		<footer className="flex flex-col bg-dark w-screen container gap-5 overflow-hidden">
 			<div className="flex flex-col gap-8 mb-4 md:px-28 px-10">
@@ -34,7 +35,7 @@ export function Footer({ data }: { data: FooterLinkSection[] }) {
 						</span>
 					</div>
 					<div className="grow grid grid-cols-2 lg:grid-cols-3 gap-16 justify-center">
-						{data.map((x) => (
+						{footerLinks.map((x) => (
 							<LinkSection data={x} key={x.title} />
 						))}
 					</div>

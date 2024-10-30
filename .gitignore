@@ -45,3 +45,4 @@ yarn-error.log*
 .sentryclirc
 
 node_modules
+.source

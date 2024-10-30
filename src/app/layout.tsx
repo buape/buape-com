@@ -9,8 +9,6 @@ import { Toaster } from "~/components/ui/toaster"
 import { cn } from "~/lib/utils"
 import Navbar from "./Navbar"
 
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
 
 const font = Rubik({
@@ -32,8 +30,6 @@ export default async function Layout({
 				<Navbar />
 				<div className="pt-3 max-w-screen min-w-screen w-dvh">{children}</div>
 				<Toaster />
-				<SpeedInsights />
-				<Analytics />
 				<BreakpointIndicator />
 			</body>
 		</html>

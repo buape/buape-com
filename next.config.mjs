@@ -1,8 +1,10 @@
 // Importing env files here to validate on build
 import "./src/env.mjs"
 
+import { createMDX } from 'fumadocs-mdx/next'
+
 /** @type {import("next").NextConfig} */
-export default {
+const config = {
 	reactStrictMode: true,
 	images: {
 		remotePatterns: [
@@ -25,3 +27,7 @@ export default {
 		]
 	}
 }
+
+const withMDX = createMDX()
+
+export default withMDX(config)
