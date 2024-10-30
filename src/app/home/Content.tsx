@@ -9,6 +9,7 @@ import { cn } from "~/lib/utils"
 
 type ContentCardData = {
 	name: string
+	belowName?: string
 	body: ReactNode
 	icon?: string
 	link?: string
@@ -120,9 +121,12 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 						className="w-6 h-6 rounded-full"
 					/>
 				) : null}
-				<span className="text-white text-lg font-bold grow w-full text-left">
+				<div className="text-white text-lg font-bold grow w-full text-left flex flex-col">
 					{data.name}
-				</span>
+					{data.belowName ? (
+						<span className="text-xs text-gray-400">{data.belowName}</span>
+					) : null}
+				</div>
 				{!data.linkBottomText ? (
 					<div className="order-last shrink-0 grow">
 						<ArrowRight className="w-6 h-6" />

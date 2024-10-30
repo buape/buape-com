@@ -43,25 +43,22 @@ const sections: ContentSectionData[] = [
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
 		cards: [
 			{
-				name: "Shadow",
-				icon: "https://cdn-raw.buape.com/crykitty.png",
-				body: "I've really loved using Kiai in my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
-				link: "#",
-				linkBottomText: "Join Penny Lovers today"
+				// https://discord.com/channels/1080982186045493338/1253730196159336620/1253731934211674163
+				name: "@byterand",
+				belowName: "Community Manager @ BeluGANG",
+				icon: "https://cdn.buape.com/web/testimonials/pfps/byterand_262614847353651200.png",
+				body: "Kiai is a must-have for servers in need of a lightweight yet in-depth leveling bot. Buape has done an outstanding job creating Kiai's many features and customization options while still maintaining a user-friendly solution to leveling.",
+				link: "https//discord.gg/beluga",
+				linkBottomText: "Join BeluGANG today"
 			},
+			// https://discord.com/channels/1080982186045493338/1253730196159336620/1253735905991069767
 			{
-				name: "Strife",
-				icon: "https://cdn-raw.buape.com/crykitty.png",
-				body: "JT-99 has been a wonderful addition to my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
-				link: "#",
-				linkBottomText: "Join The Void"
-			},
-			{
-				name: "Codeize",
-				icon: "https://cdn-raw.buape.com/crykitty.png",
-				body: "I've really loved using Kiai in my server. It's been a great experience and I'm really happy with the results. I've been using it for a while now and it's been great so far.",
-				link: "#",
-				linkBottomText: "Join Buape Studios"
+				name: "@ronykax",
+				belowName: "Owner @ Rony's Server",
+				icon: "https://cdn.buape.com/web/testimonials/pfps/ronykax_791222882499690519.png",
+				body: "The Buape team are the best software producers out there. One of their apps, Kiai, is by far the best leveling app I've ever used. They're also quite consistent with updating Kiai and releasing other awesome apps too!",
+				link: "https://discord.gg/CU5SUGNvtH",
+				linkBottomText: "Join Rony's Server"
 			}
 		]
 	}
