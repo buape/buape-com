@@ -48,7 +48,7 @@ But don’t just take our word for it, hear from some of our users on what they 
 				belowName: "Community Manager @ BeluGANG",
 				icon: "https://cdn.buape.com/web/testimonials/pfps/byterand_262614847353651200.png",
 				body: "Kiai is a must-have for servers in need of a lightweight yet in-depth leveling bot. Buape has done an outstanding job creating Kiai's many features and customization options while still maintaining a user-friendly solution to leveling.",
-				link: "https//discord.gg/beluga",
+				link: "https://discord.gg/beluga",
 				linkBottomText: "Join BeluGANG today"
 			},
 			// https://discord.com/channels/1080982186045493338/1253730196159336620/1253735905991069767
