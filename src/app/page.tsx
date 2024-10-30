@@ -44,7 +44,7 @@ But don’t just take our word for it, hear from some of our users on what they 
 		cards: [
 			{
 				// https://discord.com/channels/1080982186045493338/1253730196159336620/1253731934211674163
-				name: "@byterand",
+				name: "Rand (@byterand)",
 				belowName: "Community Manager @ BeluGANG",
 				icon: "https://cdn.buape.com/web/testimonials/pfps/byterand_262614847353651200.png",
 				body: "Kiai is a must-have for servers in need of a lightweight yet in-depth leveling bot. Buape has done an outstanding job creating Kiai's many features and customization options while still maintaining a user-friendly solution to leveling.",
@@ -53,12 +53,20 @@ But don’t just take our word for it, hear from some of our users on what they 
 			},
 			// https://discord.com/channels/1080982186045493338/1253730196159336620/1253735905991069767
 			{
-				name: "@ronykax",
+				name: "Rony (@ronykax)",
 				belowName: "Owner @ Rony's Server",
 				icon: "https://cdn.buape.com/web/testimonials/pfps/ronykax_791222882499690519.png",
 				body: "The Buape team are the best software producers out there. One of their apps, Kiai, is by far the best leveling app I've ever used. They're also quite consistent with updating Kiai and releasing other awesome apps too!",
 				link: "https://discord.gg/CU5SUGNvtH",
 				linkBottomText: "Join Rony's Server"
+			},
+			// https://discord.com/channels/1080982186045493338/1253730196159336620/1301326834742333551
+			{
+				name: "Emma (@emmmatech)",
+				icon: "https://cdn.buape.com/web/testimonials/pfps/emmmatech_407203299977068544.jpg",
+				body: "JT-99 has been a great network to connect to other like minded individuals separated by different servers. I met several great friends that I would not have met otherwise!",
+				link: "https://emmatech.dev/",
+				linkBottomText: "Check out Emma's site"
 			}
 		]
 	}
