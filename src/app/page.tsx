@@ -27,6 +27,12 @@ const sections: ContentSectionData[] = [
 				icon: "https://jt-99.net/images/jt99.png",
 				body: "JT-99 is a cross-server chat network with a dedicated team of moderators, designed to provide a safe and welcoming environment for all users.",
 				link: "https://jt-99.net"
+			},
+			{
+				name: "Carbon",
+				icon: "https://cdn-raw.buape.com/CarbonLogo.png",
+				body: "Carbon is a powerful and versatile framework designed for building HTTP-based Discord bots. It provides a robust set of tools and features that enable developers to create efficient and scalable bots with ease.",
+				link: "https://carbon.buape.com"
 			}
 			// {
 			// 	name: "Bolt",
