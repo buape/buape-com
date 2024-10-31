@@ -4,7 +4,7 @@ import { Button } from "~/components/ui/button"
 
 export default async function Navbar() {
 	return (
-		<nav className="sticky left-0 top-0 z-20 w-full bg-dark border-[#2E2E38] border-b-2">
+		<nav className="sticky left-0 top-0 z-20 w-screen bg-dark border-[#2E2E38] border-b-2">
 			<div className="flex flex-wrap items-center px-5 py-2.5">
 				<Link
 					className="order-1 flex flex-row grow items-center gap-2"

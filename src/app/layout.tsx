@@ -26,7 +26,12 @@ export default async function Layout({
 }) {
 	return (
 		<html lang="en">
-			<body className={cn("max-w-full max-h-full bg-dark", font.className)}>
+			<body
+				className={cn(
+					"max-w-screen max-h-full bg-dark overflow-x-hidden",
+					font.className
+				)}
+			>
 				<Navbar />
 				<div className="pt-3 max-w-screen min-w-screen w-dvh">{children}</div>
 				<Toaster />
