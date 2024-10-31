@@ -10,7 +10,7 @@ export function HeroBackground() {
 
 export function Hero() {
 	return (
-		<div className="flex flex-col w-screen max-w-screen-lg h-dvh items-center justify-center container">
+		<div className="flex flex-col w-screen max-w-screen-lg h-dvh items-center justify-center container sm:mt-0 mt-32">
 			<Image
 				src={"https://cdn.buape.com/buape_circle.png"}
 				priority={true}
