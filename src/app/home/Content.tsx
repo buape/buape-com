@@ -127,7 +127,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 						<span className="text-xs text-gray-400">{data.belowName}</span>
 					) : null}
 				</div>
-				{!data.linkBottomText ? (
+				{!data.linkBottomText && data.link ? (
 					<div className="order-last shrink-0 grow">
 						<ArrowRight className="w-6 h-6" />
 					</div>
