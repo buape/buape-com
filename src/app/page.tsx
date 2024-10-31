@@ -63,6 +63,7 @@ But don’t just take our word for it, hear from some of our users on what they 
 			// https://discord.com/channels/1080982186045493338/1253730196159336620/1301326834742333551
 			{
 				name: "Emma (@emmmatech)",
+				belowName: "Active JT-99 Member",
 				icon: "https://cdn.buape.com/web/testimonials/pfps/emmmatech_407203299977068544.jpg",
 				body: "JT-99 has been a great network to connect to other like minded individuals separated by different servers. I met several great friends that I would not have met otherwise!",
 				link: "https://emmatech.dev/",
