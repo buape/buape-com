@@ -74,6 +74,14 @@ But don’t just take our word for it, hear from some of our users on what they 
 				body: "JT-99 has been a great network to connect to other like minded individuals separated by different servers. I met several great friends that I would not have met otherwise!",
 				link: "https://emmatech.dev/",
 				linkBottomText: "Check out Emma's site"
+			},
+			{
+				name: "ELI (@einsturd)",
+				belowName: "Artist/Owner @ Sturdy Shelter", 
+				icon: "https://cdn.buape.com/web/testimonials/pfps/einsturd_712187277568376903.png",
+				body: "Kiai is definitely the ultimate leveling bot, aside from having customizable XP settings and formula, Kiai allows server owners to get creative with how they can give their members XP and create custom XP events which just really makes leveling more fun, engaging, and playful.",
+				link: "https://discord.gg/MM8DZ9HP3e",
+				linkBottomText: "Join Sturdy Shelter"
 			}
 		]
 	}
