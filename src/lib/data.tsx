@@ -111,6 +111,10 @@ export const footerLinks: FooterLinkSection[] = [
 			{
 				text: "Privacy Policy",
 				link: "https://buape.com/privacy-policy"
+			},
+			{
+				text: "Security Policy",
+				link: "https://buape.com/security"
 			}
 		]
 	},
