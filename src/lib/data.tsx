@@ -4,13 +4,6 @@ import { FaXTwitter } from "react-icons/fa6"
 import type { FooterLinkSection } from "~/app/home/Footer"
 
 export const footerLinks: FooterLinkSection[] = [
-	{
-		title: "Projects",
-		links: [
-			{ text: "Kiai", link: "https://kiai.app" },
-			{ text: "JT-99", link: "https://jt-99.net" }
-		]
-	},
 	// {
 	// 	title: "Services",
 	// 	links: [

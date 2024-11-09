@@ -174,7 +174,7 @@ export default async function Page() {
 				<ContentSection {...x} key={x.title} />
 			))}
 			<JoinTheTeam />
-			<Footer />
+			<Footer projects={sections.find((x) => x.id === "projects")?.cards!} />
 		</div>
 	)
 }

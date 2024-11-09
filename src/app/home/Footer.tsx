@@ -15,7 +15,9 @@ type FooterLink = {
 	link: string
 }
 
-export function Footer() {
+export function Footer({
+	projects
+}: { projects: { name: string; link?: string }[] }) {
 	return (
 		<footer className="flex flex-col bg-dark w-screen container gap-5 overflow-hidden">
 			<div className="flex flex-col gap-8 mb-4 md:px-28 px-10">
@@ -35,6 +37,14 @@ export function Footer() {
 						</span>
 					</div>
 					<div className="grow grid grid-cols-2 lg:grid-cols-3 gap-16 justify-center">
+						<LinkSection
+							data={{
+								title: "Projects",
+								links: projects
+									.filter((x) => x.link !== undefined)
+									.map((x) => ({ text: x.name, link: x.link! }))
+							}}
+						/>
 						{footerLinks.map((x) => (
 							<LinkSection data={x} key={x.title} />
 						))}
