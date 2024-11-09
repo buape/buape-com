@@ -83,6 +83,14 @@ But don’t just take our word for it, hear from some of our users on what they 
 				body: "Kiai is definitely the ultimate leveling bot, aside from having customizable XP settings and formula, Kiai allows server owners to get creative with how they can give their members XP and create custom XP events which just really makes leveling more fun, engaging, and playful.",
 				link: "https://discord.gg/MM8DZ9HP3e",
 				linkBottomText: "Join Sturdy Shelter"
+			},
+			{
+				name: "Two (@real2two)",
+				belowName: "Developer @ Custom Developments",
+				icon: "https://cdn.buape.com/web/testimonials/pfps/real2two_276497792526974996.png",
+				body: "Kiai is one of the most feature-full leveling bots I've seen. Many bots are either limited, vote-lock feature and/or put really cool features behind a paywall, but on the other hand, Kiai gives you so many options, such as setting your own formula for leveling and many other commands to easily modify how much XP people have. Additionally, it has a REST API, which I'm looking forward to integrate into a project I'm working on. The support team is relatively cool as well and replies back in a reasonable amount of time.",
+				link: "https://discord.gg/mxVTezz",
+				linkBottomText: "Join Custom Developments"
 			}
 		]
 	}
