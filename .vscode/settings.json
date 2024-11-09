@@ -30,6 +30,9 @@
 		"zukeeper",
 		"zustand"
 	],
+	"cSpell.ignorePaths": [
+		"content/**"
+	],
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},

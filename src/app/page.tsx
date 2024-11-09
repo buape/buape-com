@@ -8,6 +8,7 @@ import {
 import { Footer } from "./home/Footer"
 import { Hero, HeroBackground } from "./home/Hero"
 import { createMetadata } from "./createMetadata"
+import { blog } from "~/lib/source"
 
 const sections: ContentSectionData[] = [
 	{
@@ -77,7 +78,7 @@ But don’t just take our word for it, hear from some of our users on what they 
 			},
 			{
 				name: "ELI (@einsturd)",
-				belowName: "Artist/Owner @ Sturdy Shelter", 
+				belowName: "Artist/Owner @ Sturdy Shelter",
 				icon: "https://cdn.buape.com/web/testimonials/pfps/einsturd_712187277568376903.png",
 				body: "Kiai is definitely the ultimate leveling bot, aside from having customizable XP settings and formula, Kiai allows server owners to get creative with how they can give their members XP and create custom XP events which just really makes leveling more fun, engaging, and playful.",
 				link: "https://discord.gg/MM8DZ9HP3e",
@@ -124,6 +125,35 @@ export default async function Page() {
 				}
 			}),
 			marquee: true
+		})
+
+	const posts = [...blog.getPages()].sort(
+		(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+	)
+	if (posts && !sections.find((x) => x.id === "blog"))
+		sections.push({
+			id: "blog",
+			title: "Our Blog",
+			description: `Check out our blog for the latest news and updates.`,
+			cards: posts.map((post) => {
+				const author = staffList?.data.staff.find(
+					(x: { id: string }) => x.id === post.data.authorId
+				)
+				return {
+					name: post.data.title,
+					body: post.data.description,
+					link: `/blog/${post.slugs.join("/")}`,
+					author: author
+						? {
+								name: author.username!,
+								avatarUrl: author.avatarUrl!,
+								date: new Date(
+									post.data.date.valueOf() + post.data.date.getTimezoneOffset()
+								)
+							}
+						: undefined
+				}
+			})
 		})
 
 	return (

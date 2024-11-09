@@ -26,10 +26,15 @@ export function Hero() {
 				well as <span className="font-bold">empowering and supporting</span> the{" "}
 				<span className="font-bold"> next generation</span> of developers.
 			</div>
-			<div className="flex md:flex-row flex-col md:gap-10 gap-2 my-12 mb-64 md:mb-12">
+			<div className="flex md:flex-row flex-col md:gap-6 gap-2 my-12 mb-64 md:mb-12">
 				<Link href={"#projects"} className="w-56">
 					<Button variant={"default"} className="w-full">
 						Our Projects
+					</Button>
+				</Link>
+				<Link href={"/blog"} className="w-56">
+					<Button variant={"default"} className="w-full">
+						Our Blog
 					</Button>
 				</Link>
 				<Link href={"https://discord.gg/bgASSujRMj"} className="w-56">

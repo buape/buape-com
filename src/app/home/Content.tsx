@@ -14,6 +14,11 @@ type ContentCardData = {
 	icon?: string
 	link?: string
 	linkBottomText?: string
+	author?: {
+		avatarUrl: string
+		name: string
+		date: Date
+	}
 }
 export type ContentSectionData = {
 	id: string
@@ -106,7 +111,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 	return (
 		<Link
 			className={cn(
-				"grow p-4 bg-dark rounded-xl border-gray border flex-col flex gap-4 shrink-0 basis-0 w-80",
+				"grow p-4 bg-dark rounded-xl border-gray border flex-col flex gap-4 shrink-0 basis-0 w-80 min-w-80 max-w-xl",
 				data.className || ""
 			)}
 			href={data.link || "#"}
@@ -142,6 +147,24 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 					<div className="order-last shrink">
 						<ArrowRight className="w-6 h-6" />
 					</div>
+				</div>
+			) : data.author ? (
+				<div className="text-sm text-nowrap overflow-clip whitespace-nowrap flex flex-row align-bottom items-center">
+					<Image
+						src={
+							data.author.avatarUrl || "https://cdn.buape.com/buape_circle.png"
+						}
+						width={64}
+						height={64}
+						alt={`${data.author.name}'s Avatar`}
+						className="w-6 h-6 rounded-full mr-2"
+					/>
+					<span className="text-white font-bold grow w-full text-left">
+						{data.author.name}
+					</span>{" "}
+					<span className="text-sm text-gray-400">
+						{data.author.date.toLocaleDateString()}
+					</span>
 				</div>
 			) : null}
 		</Link>

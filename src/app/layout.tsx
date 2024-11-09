@@ -25,7 +25,13 @@ export default async function Layout({
 	children: ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html
+			lang="en"
+			style={{
+				scrollPaddingTop: "100px",
+				scrollBehavior: "smooth"
+			}}
+		>
 			<body
 				className={cn(
 					"max-w-screen max-h-full bg-dark overflow-x-hidden",

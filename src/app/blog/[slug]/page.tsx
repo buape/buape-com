@@ -13,8 +13,16 @@ export default async function Page(props: {
 }) {
 	const params = await props.params
 	const page = blog.getPage([params.slug])
-
 	if (!page) notFound()
+
+	const staff = await fetch("https://internal.buape.com/staff", {
+		cache: "force-cache",
+		next: { revalidate: 3600 }
+	}).then((res) => res.json())
+
+	const author = staff.data.staff.find(
+		(x: { id: string }) => x.id === page.data.authorId
+	)
 
 	return (
 		<>
@@ -25,25 +33,26 @@ export default async function Page(props: {
 					<div className="flex flex-row gap-2 items-center">
 						<Image
 							className="rounded-full"
-							src={
-								page.data.authorImage ||
-								"https://cdn.buape.com/buape_circle.png"
-							}
+							src={author.avatarUrl || "https://cdn.buape.com/buape_circle.png"}
 							width={32}
 							height={32}
-							alt={page.data.author}
+							alt={`${author.username}'s Avatar`}
 						/>
-						<span className="text-lg font-bold">{page.data.author}</span>
+						<span className="text-lg font-bold">{author.username}</span>
 						<Dot width={32} height={32} />
 						<span className="text-lg font-bold">
-							{page.data.date.toLocaleDateString()}
+							{new Date(
+								page.data.date.valueOf() + page.data.date.getTimezoneOffset()
+							).toLocaleDateString()}
 						</span>
 					</div>
 				</header>
 				<main>
 					<div className="prose prose-lg max-w-none p-10">
 						<div className="mt-10">
-							<page.data.body components={defaultMdxComponents} />
+							<page.data.body
+								components={{ ...defaultMdxComponents, hr: () => <p>---</p> }}
+							/>
 						</div>
 					</div>
 				</main>
@@ -61,9 +70,19 @@ export async function generateMetadata(props: {
 
 	if (!page) notFound()
 
+	const staff = await fetch("https://internal.buape.com/staff", {
+		next: { revalidate: 3600 }
+	}).then((res) => res.json())
+
+	const author = staff.data.staff.find(
+		(x: { id: string }) => x.id === page.data.authorId
+	)
+
 	return createMetadata({
-		title: page.data.title,
-		description: page.data.description
+		title: `Blog: ${page.data.title}`,
+		description: `${page.data.description}\n\nWritten by ${author.username} on ${new Date(
+			page.data.date.valueOf() + page.data.date.getTimezoneOffset()
+		).toLocaleDateString()}`
 	})
 }
 
