@@ -3,16 +3,13 @@ import { notFound } from "next/navigation"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { pages } from "~/lib/source"
 import { createMetadata } from "~/app/createMetadata"
-import Image from "next/image"
 import { HeroBackground } from "~/app/home/Hero"
-import { Dot } from "lucide-react"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
 	const page = pages.getPage([params.slug])
-	console.log(pages.getPages())
 	if (!page) notFound()
 
 	return (
