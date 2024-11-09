@@ -8,7 +8,7 @@ export function HeroBackground() {
 	)
 }
 
-export function Hero() {
+export function Hero({ showBlog }: { showBlog: boolean }) {
 	return (
 		<div className="flex flex-col w-screen max-w-screen-lg h-dvh items-center justify-center container sm:mt-0 mt-32">
 			<Image
@@ -32,11 +32,13 @@ export function Hero() {
 						Our Projects
 					</Button>
 				</Link>
-				<Link href={"/blog"} className="w-56">
-					<Button variant={"default"} className="w-full">
-						Our Blog
-					</Button>
-				</Link>
+				{showBlog ? (
+					<Link href={"/blog"} className="w-56">
+						<Button variant={"default"} className="w-full">
+							Our Blog
+						</Button>
+					</Link>
+				) : null}
 				<Link href={"https://discord.gg/bgASSujRMj"} className="w-56">
 					<Button variant={"outline"} className="w-full">
 						Join Us on Discord

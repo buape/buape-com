@@ -130,7 +130,7 @@ export default async function Page() {
 	const posts = [...blog.getPages()].sort(
 		(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 	)
-	if (posts && !sections.find((x) => x.id === "blog"))
+	if (posts.length > 0 && !sections.find((x) => x.id === "blog"))
 		sections.push({
 			id: "blog",
 			title: "Our Blog",
@@ -160,7 +160,7 @@ export default async function Page() {
 		<div>
 			<HeroBackground />
 			<div className="h-[calc(100vh-74px)]">
-				<Hero />
+				<Hero showBlog={posts.length > 0} />
 			</div>
 			{sections.map((x) => (
 				<ContentSection {...x} key={x.title} />
