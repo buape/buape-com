@@ -88,7 +88,6 @@ export default async function Page() {
 				<ContentSection {...x} key={x.title} />
 			))}
 			<JoinTheTeam />
-			<Footer projects={projects} />
 		</div>
 	)
 }

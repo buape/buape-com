@@ -30,6 +30,7 @@ export default async function Page(props: {
 			<article className="m-10 items-center justify-center bg-neutral-950 p-5 text-white">
 				<header className="flex flex-col gap-10 items-center m-5 pb-5 border-b border-neutral-300">
 					<h1 className="text-3xl font-bold">{page.data.title}</h1>
+					<h2 className="text-xl font-bold">{page.data.description}</h2>
 					<div className="flex flex-row gap-2 items-center">
 						<Image
 							className="rounded-full"
@@ -57,7 +58,6 @@ export default async function Page(props: {
 					</div>
 				</main>
 			</article>
-			<Footer projects={projects} />
 		</>
 	)
 }

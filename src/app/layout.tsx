@@ -10,6 +10,8 @@ import { cn } from "~/lib/utils"
 import Navbar from "./Navbar"
 
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
+import { projects } from "~/lib/data"
+import { Footer } from "./home/Footer"
 
 const font = Rubik({
 	subsets: ["latin"]
@@ -40,6 +42,7 @@ export default async function Layout({
 			>
 				<Navbar />
 				<div className="pt-3 max-w-screen min-w-screen w-dvh">{children}</div>
+				<Footer projects={projects} />
 				<Toaster />
 				<BreakpointIndicator />
 			</body>

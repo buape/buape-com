@@ -106,11 +106,11 @@ export const footerLinks: FooterLinkSection[] = [
 		links: [
 			{
 				text: "Terms of Service",
-				link: "https://github.com/buape/kiai-legal/blob/main/TOS.md"
+				link: "https://local.shadowing.dev/terms"
 			},
 			{
 				text: "Privacy Policy",
-				link: "https://github.com/buape/kiai-legal/blob/main/TOS.md#:~:text=rights%20of%20others.-,Privacy%20Policy,-5.1.%20Data%20Collection"
+				link: "https://local.shadowing.dev/terms#5-privacy-policy"
 			}
 		]
 	},

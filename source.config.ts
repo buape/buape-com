@@ -14,6 +14,13 @@ export const blog = defineCollections({
 	}),
 	type: "doc"
 });
+export const pages = defineCollections({
+	dir: 'content/pages',
+	schema: frontmatterSchema.extend({
+		description: z.string().optional(),
+	}),
+	type: "doc"
+});
 
 
 export default defineConfig({
