@@ -7,6 +7,7 @@ import Image from "next/image"
 import { HeroBackground } from "~/app/home/Hero"
 import { Footer } from "~/app/home/Footer"
 import { Dot } from "lucide-react"
+import { projects } from "~/lib/data"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
@@ -16,7 +17,6 @@ export default async function Page(props: {
 	if (!page) notFound()
 
 	const staff = await fetch("https://internal.buape.com/staff", {
-		cache: "force-cache",
 		next: { revalidate: 3600 }
 	}).then((res) => res.json())
 
@@ -57,7 +57,7 @@ export default async function Page(props: {
 					</div>
 				</main>
 			</article>
-			<Footer />
+			<Footer projects={projects} />
 		</>
 	)
 }
