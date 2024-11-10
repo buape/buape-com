@@ -19,8 +19,8 @@ export function Footer({
 	projects
 }: { projects: { name: string; link?: string }[] }) {
 	return (
-		<footer className="flex flex-col bg-dark w-screen container gap-5 overflow-hidden">
-			<div className="flex flex-col gap-8 mb-4 md:px-28 px-10">
+		<footer className="flex flex-col bg-dark w-screen gap-5 overflow-hidden">
+			<div className="flex flex-col gap-8 mb-4 md:px-28 px-10 container">
 				<div className="flex md:flex-row flex-col md:gap-10 py-20 justify-center">
 					<div className="flex flex-col gap-2 grow shrink-0 md:mb-0 mb-10">
 						<Image
