@@ -3,11 +3,15 @@ import { createEnv } from "@t3-oss/env-nextjs"
 import { z } from "zod"
 
 export const env = createEnv({
-	extends: [vercel],
+	extends: [],
 	shared: {},
-	server: {},
+	server: {
+		NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
+	},
 	client: {},
-	runtimeEnv: {},
+	runtimeEnv: {
+		NODE_ENV: process.env.NODE_ENV,
+	},
 	skipValidation:
 		!!process.env.CI ||
 		!!process.env.SKIP_ENV_VALIDATION ||
