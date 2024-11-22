@@ -1,12 +1,6 @@
-import type { Metadata } from "next"
-import { footerLinks, projects, sections } from "~/lib/data"
-import {
-	ContentSection,
-	type ContentSectionData,
-	JoinTheTeam
-} from "./home/Content"
-import { Footer } from "./home/Footer"
-import { Hero, HeroBackground } from "./home/Hero"
+import { sections } from "~/lib/data"
+import { ContentSection, JoinTheTeam } from "./home/Content"
+import { Hero } from "./home/Hero"
 import { createMetadata } from "./createMetadata"
 import { blog } from "~/lib/source"
 
@@ -80,7 +74,6 @@ export default async function Page() {
 
 	return (
 		<div>
-			<HeroBackground />
 			<div className="h-[calc(100vh-74px)]">
 				<Hero showBlog={posts.length > 0} />
 			</div>
