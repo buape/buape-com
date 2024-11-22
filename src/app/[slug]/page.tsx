@@ -2,8 +2,9 @@ import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
-import { HeroBackground } from "~/app/home/Hero"
+import GridPattern from "~/components/ui/grid-pattern"
 import { pages } from "~/lib/source"
+import { cn } from "~/lib/utils"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
@@ -14,7 +15,11 @@ export default async function Page(props: {
 
 	return (
 		<>
-			<HeroBackground />
+			<GridPattern
+				className={cn(
+					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]"
+				)}
+			/>
 			<article className="m-10 items-center justify-center bg-neutral-950 p-5 text-white">
 				<header className="flex flex-col gap-10 items-center m-5 pb-5 border-b border-neutral-300">
 					<h1 className="text-3xl font-bold">{page.data.title}</h1>
