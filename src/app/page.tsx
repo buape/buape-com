@@ -1,8 +1,8 @@
 import { sections } from "~/lib/data"
+import { blog } from "~/lib/source"
+import { createMetadata } from "./createMetadata"
 import { ContentSection, JoinTheTeam } from "./home/Content"
 import { Hero } from "./home/Hero"
-import { createMetadata } from "./createMetadata"
-import { blog } from "~/lib/source"
 
 async function getData() {
 	const res = await fetch("https://internal.buape.com/staff", {

@@ -9,11 +9,11 @@ import { Toaster } from "~/components/ui/toaster"
 import { cn } from "~/lib/utils"
 import Navbar from "./Navbar"
 
+import Script from "next/script"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
+import { env } from "~/env.mjs"
 import { projects } from "~/lib/data"
 import { Footer } from "./home/Footer"
-import Script from "next/script"
-import { env } from "~/env.mjs"
 
 const font = Rubik({
 	subsets: ["latin"]

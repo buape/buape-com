@@ -2,8 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "~/components/ui/button"
 
-import { cn } from "~/lib/utils"
 import GridPattern from "~/components/ui/grid-pattern"
+import { cn } from "~/lib/utils"
 
 // export function HeroBackground() {
 // 	return (

@@ -26,7 +26,8 @@
 			"correctness": {
 				"noUnusedVariables": "error",
 				"noConstAssign": "error",
-				"noUndeclaredVariables": "error"
+				"noUndeclaredVariables": "error",
+				"noUnusedImports": "error"
 			},
 			"style": {
 				"noUnusedTemplateLiteral": "off",

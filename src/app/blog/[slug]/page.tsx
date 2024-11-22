@@ -1,13 +1,12 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
 import defaultMdxComponents from "fumadocs-ui/mdx"
-import { blog } from "~/lib/source"
-import { createMetadata } from "~/app/createMetadata"
-import Image from "next/image"
-import { HeroBackground } from "~/app/home/Hero"
-import { Footer } from "~/app/home/Footer"
 import { Dot } from "lucide-react"
-import { projects } from "~/lib/data"
+import type { Metadata } from "next"
+import Image from "next/image"
+import { notFound } from "next/navigation"
+import { createMetadata } from "~/app/createMetadata"
+import GridPattern from "~/components/ui/grid-pattern"
+import { blog } from "~/lib/source"
+import { cn } from "~/lib/utils"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
@@ -26,7 +25,11 @@ export default async function Page(props: {
 
 	return (
 		<>
-			<HeroBackground />
+			<GridPattern
+				className={cn(
+					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]"
+				)}
+			/>
 			<article className="m-10 items-center justify-center bg-neutral-950 p-5 text-white">
 				<header className="flex flex-col gap-10 items-center m-5 pb-5 border-b border-neutral-300">
 					<h1 className="text-3xl font-bold">{page.data.title}</h1>

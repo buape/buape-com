@@ -1,9 +1,9 @@
+import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import defaultMdxComponents from "fumadocs-ui/mdx"
-import { pages } from "~/lib/source"
 import { createMetadata } from "~/app/createMetadata"
 import { HeroBackground } from "~/app/home/Hero"
+import { pages } from "~/lib/source"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>

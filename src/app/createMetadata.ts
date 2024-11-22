@@ -1,7 +1,10 @@
 import type { Metadata } from "next"
 
-export const createMetadata = ({ title, description }: {
-	title?: string,
+export const createMetadata = ({
+	title,
+	description
+}: {
+	title?: string
 	description?: string
 }): Metadata => ({
 	title: title ?? "Buape Studios",
