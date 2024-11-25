@@ -17,7 +17,7 @@ export default async function Page(props: {
 		<>
 			<GridPattern
 				className={cn(
-					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]"
+					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)] -z-50"
 				)}
 			/>
 			<article className="m-10 items-center justify-center bg-neutral-950 p-5 text-white">
