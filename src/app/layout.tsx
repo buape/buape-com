@@ -11,7 +11,6 @@ import Navbar from "./Navbar"
 
 import Script from "next/script"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
-import { env } from "~/env.mjs"
 import { projects } from "~/lib/data"
 import { Footer } from "./home/Footer"
 
@@ -47,13 +46,12 @@ export default async function Layout({
 				<Footer projects={projects} />
 				<Toaster />
 				<BreakpointIndicator />
-				{env.NODE_ENV === "production" ? (
-					<Script
-						defer
-						src="https://stats.b1.buape.com/script.js"
-						data-website-id="220d5910-f06d-465b-991b-280d8867a803"
-					/>
-				) : null}
+				<Script
+					defer
+					src="https://stats.b1.buape.com/script.js"
+					data-website-id="220d5910-f06d-465b-991b-280d8867a803"
+					data-domains="www.buape.com"
+				/>
 			</body>
 		</html>
 	)

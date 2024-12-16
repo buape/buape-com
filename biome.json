@@ -4,9 +4,8 @@
 		"ignore": [
 			"dist",
 			".next",
-			"*generated*",
-			"./packages/**/package.json",
-			"./packages/**/tsconfig.json"
+			"out",
+			"*generated*"
 		],
 		"ignoreUnknown": true
 	},

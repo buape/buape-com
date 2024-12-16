@@ -12,9 +12,7 @@ export const createMetadata = ({
 		description ??
 		"Buape Studios is a development studio committed to producing quality applications, as well as empowering and supporting the next generation of developers.",
 	metadataBase:
-		process.env.NODE_ENV === "production"
-			? new URL("https://www.buape.com")
-			: new URL("http://localhost:3000"),
+		new URL("https://www.buape.com"),
 	twitter: {
 		card: "summary",
 		title: title ?? "Buape Studios",

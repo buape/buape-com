@@ -1,6 +1,3 @@
-// Importing env files here to validate on build
-import "./src/env.mjs"
-
 import { createMDX } from "fumadocs-mdx/next"
 
 /** @type {import("next").NextConfig} */
@@ -12,10 +9,6 @@ const config = {
 			{
 				protocol: "https",
 				hostname: "*.buape.com"
-			},
-			{
-				protocol: "https",
-				hostname: "*.stattrack.dev"
 			},
 			{
 				protocol: "https",
