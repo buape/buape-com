@@ -1,0 +1,24 @@
+<svg width="1920" height="952" viewBox="0 0 1920 952" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.5" y1="60.0001" x2="0.5" y2="952" stroke="#2E2E38"/>
+<line x1="213.833" y1="60.0001" x2="213.833" y2="952" stroke="#2E2E38"/>
+<line x1="427.167" y1="60.0001" x2="427.167" y2="952" stroke="#2E2E38"/>
+<line x1="640.5" y1="60.0001" x2="640.5" y2="952" stroke="#2E2E38"/>
+<line x1="853.833" y1="60.0001" x2="853.833" y2="952" stroke="#2E2E38"/>
+<line x1="1067.17" y1="60.0001" x2="1067.17" y2="952" stroke="#2E2E38"/>
+<line x1="1280.5" y1="60.0001" x2="1280.5" y2="952" stroke="#2E2E38"/>
+<line x1="1493.83" y1="60.0001" x2="1493.83" y2="952" stroke="#2E2E38"/>
+<line x1="1707.17" y1="60.0001" x2="1707.17" y2="952" stroke="#2E2E38"/>
+<line y1="59.5001" x2="1920" y2="59.5001" stroke="#2E2E38"/>
+<line y1="238.694" x2="1920" y2="238.694" stroke="#2E2E38"/>
+<line y1="416.863" x2="1920" y2="416.863" stroke="#2E2E38"/>
+<line y1="-0.5" x2="1920" y2="-0.5" transform="matrix(1 -7.31309e-05 6.97481e-05 1 0 595.533)" stroke="#2E2E38"/>
+<line y1="-0.5" x2="1920" y2="-0.5" transform="matrix(1 3.02252e-05 -2.8827e-05 1 0 773.702)" stroke="#2E2E38"/>
+<line y1="951.5" x2="1920" y2="951.5" stroke="#2E2E38"/>
+<rect y="952" width="952" height="1920" transform="rotate(-90 0 952)" fill="url(#paint0_linear_2_389)"/>
+<defs>
+<linearGradient id="paint0_linear_2_389" x1="0" y1="1912" x2="952" y2="1912" gradientUnits="userSpaceOnUse">
+<stop offset="0.05" stop-color="#1A1A20"/>
+<stop offset="0.8" stop-color="#1A1A20" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
