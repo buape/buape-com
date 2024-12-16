@@ -90,7 +90,5 @@ export async function generateMetadata(props: {
 }
 
 export function generateStaticParams(): { slug: string }[] {
-	return blog.getPages().map((page) => ({
-		slug: page.slugs.join("/")
-	}))
+	return []
 }

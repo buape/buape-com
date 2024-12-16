@@ -30,11 +30,16 @@
 		"zukeeper",
 		"zustand"
 	],
-	"cSpell.ignorePaths": ["content/**"],
+	"cSpell.ignorePaths": [
+		"content/**"
+	],
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///Users/shadow/Projects/buape-com/.github/workflows/deploy.yml"
 	}
 }
