@@ -4,10 +4,13 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "next build",
+		"build": "cloudflare",
+		"deploy": "pnpm run build && wrangler deploy",
+		"dev:worker": "wrangler dev --port 8771",
 		"dev": "next dev",
 		"lint": "biome check . --write --diagnostic-level=warn",
 		"postinstall": "fumadocs-mdx",
+		"preview:worker": "pnpm run build && pnpm run dev",
 		"start": "next start"
 	},
 	"dependencies": {
@@ -19,7 +22,7 @@
 		"fumadocs-mdx": "11.1.2",
 		"fumadocs-ui": "14.6.1",
 		"lucide-react": "0.468.0",
-		"next": "15.1.0",
+		"next": "14.2.20",
 		"react": "19.0.0",
 		"react-dom": "19.0.0",
 		"react-icons": "5.4.0",
@@ -29,13 +32,15 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@opennextjs/cloudflare": "0.2.1",
 		"@types/node": "^22.10.2",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "19.0.2",
 		"clsx": "2.1.1",
 		"tailwind-merge": "2.5.5",
 		"tailwindcss": "3.4.16",
-		"typescript": "5.7.2"
+		"typescript": "5.7.2",
+		"wrangler": "^3.96.0"
 	},
 	"packageManager": "pnpm@9.15.0"
 }

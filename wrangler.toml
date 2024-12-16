@@ -1,0 +1,8 @@
+name = "buape-com"
+main = ".worker-next/index.mjs"
+compatibility_date = "2024-12-16"
+compatibility_flags = ["nodejs_compat"]
+assets = { directory = ".worker-next/assets", binding = "ASSETS" }
+
+[observability.logs]
+enabled = true
