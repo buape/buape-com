@@ -59,7 +59,7 @@ importers:
         version: 1.9.4
       '@opennextjs/cloudflare':
         specifier: 0.2.1
-        version: https://pkg.pr.new/@opennextjs/cloudflare@main(wrangler@3.96.0)
+        version: 0.2.1(wrangler@3.98.0)
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -82,8 +82,8 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
       wrangler:
-        specifier: ^3.96.0
-        version: 3.96.0
+        specifier: ^3.98.0
+        version: 3.98.0
 
 packages:
 
@@ -740,9 +740,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opennextjs/cloudflare@https://pkg.pr.new/@opennextjs/cloudflare@main':
-    resolution: {tarball: https://pkg.pr.new/@opennextjs/cloudflare@main}
-    version: 0.2.1
+  '@opennextjs/cloudflare@0.2.1':
+    resolution: {integrity: sha512-jHFz6wLcdvdedqVPmfgr3T0/twSw0ck7pupCD9uquuK63tevepXSbcwMSaymLCdFO0UTCMCBvY2D43tRXeueng==}
     hasBin: true
     peerDependencies:
       wrangler: ^3.78.10
@@ -2449,8 +2448,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.96.0:
-    resolution: {integrity: sha512-KjbHTUnwTa5eKl3hzv2h6nHBfAsbUkdurL7f6Y288/Bdn6tcEis13jLVR/nw/eWa3tNCBG1xOMZJboUyzWcC1g==}
+  wrangler@3.98.0:
+    resolution: {integrity: sha512-s3R2Jdai+sIAQ1Fd+WzEK5fVxYHxAN7qbjYPXGx75dxM9/O2p+CT666PYLROGIk4sfAeLU4eVp9iqfVDuiQESw==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -3002,10 +3001,10 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@opennextjs/cloudflare@https://pkg.pr.new/@opennextjs/cloudflare@main(wrangler@3.96.0)':
+  '@opennextjs/cloudflare@0.2.1(wrangler@3.98.0)':
     dependencies:
       ts-morph: 23.0.0
-      wrangler: 3.96.0
+      wrangler: 3.98.0
 
   '@orama/orama@2.1.1': {}
 
@@ -5194,7 +5193,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20241205.0
       '@cloudflare/workerd-windows-64': 1.20241205.0
 
-  wrangler@3.96.0:
+  wrangler@3.98.0:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
