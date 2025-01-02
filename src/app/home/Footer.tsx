@@ -52,7 +52,7 @@ export function Footer({
 				</div>
 				<div className="align-bottom flex flex-row">
 					<div className="text-neutral-500 grow">
-						© 2024 Buape Studios. All rights reserved.
+						© 2025 Buape Studios. All rights reserved.
 					</div>
 					<div className="flex flex-row gap-2">
 						<Link href="https://twitter.com/buapestudios">
