@@ -42,7 +42,7 @@ export const sections: ContentSectionData[] = [
 	{
 		id: "testimonials",
 		title: "We Do It Best",
-		description: `700+ communities, 900,000+ users.
+		description: `750+ communities, 1.000.000+ users.
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
 		cards: [
 			{
