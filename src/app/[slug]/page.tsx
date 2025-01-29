@@ -27,7 +27,7 @@ export default async function Page(props: {
 				</header>
 				<main>
 					<div className="prose prose-lg max-w-none p-10">
-						<div className="mt-10">
+						<div className="mt-10 text-white">
 							<page.data.body components={{ ...defaultMdxComponents }} />
 						</div>
 					</div>

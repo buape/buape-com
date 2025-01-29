@@ -58,7 +58,7 @@ We collect and process the following information which may include your personal
 
 - We do not access or store emails or phone numbers for our users.
 
-- We do not store or parse messages from any users, except for other bots that provide logging data that we scrape. We do not access any messages sent by users, only bot messages, and they are not stored in our database.
+- We do not store messages from any users using Kiai. We do access message content sent by users, but these are only used in features such as our message content placeholder, and are not stored within our database.
 
 ### 5.3. Data Retention: 
 All data relating to the a guild or user is kept for 30 days after a guild has been removed from our services, at which point it will be cleared from our database.
