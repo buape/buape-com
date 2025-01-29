@@ -13,7 +13,11 @@
 		"noUncheckedIndexedAccess": true,
 		"checkJs": false,
 		/* Bundled projects */
-		"lib": ["dom", "dom.iterable", "ES2022"],
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"ES2022"
+		],
 		"noEmit": true,
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
@@ -27,7 +31,9 @@
 		/* Path Aliases */
 		"baseUrl": ".",
 		"paths": {
-			"~/*": ["./src/*"]
+			"~/*": [
+				"./src/*"
+			]
 		}
 	},
 	"include": [
@@ -42,5 +48,8 @@
 		"next.config.mjs",
 		"src/app/not-found.tsx"
 	],
-	"exclude": ["node_modules"]
+	"exclude": [
+		"node_modules",
+		"open-next.config.ts"
+	]
 }

@@ -4,8 +4,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "cloudflare",
-		"deploy": "pnpm run build && wrangler deploy",
+		"build": "next build",
+		"build:worker": "opennextjs-cloudflare",
+		"deploy": "pnpm run build:worker && wrangler deploy",
 		"dev:worker": "wrangler dev --port 8771",
 		"dev": "next dev",
 		"lint": "biome check . --write --diagnostic-level=warn",
@@ -32,8 +33,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@opennextjs/cloudflare": "0.2.1",
-		"@types/node": "^22.10.2",
+		"@opennextjs/cloudflare": "0.4.0",
+		"@types/node": "22.10.2",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "19.0.2",
 		"clsx": "2.1.1",
