@@ -6,7 +6,7 @@ import { Hero } from "./home/Hero"
 
 async function getData() {
 	const res = await fetch("https://internal.buape.com/staff", {
-		next: { revalidate: 3600 }
+		cache: "no-store"
 	})
 	if (res.ok) {
 		return (await res.json()) as {
