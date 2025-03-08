@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import { sections } from "~/lib/data"
 import { blog } from "~/lib/source"
 import { createMetadata } from "./createMetadata"
