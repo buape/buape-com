@@ -2,8 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "~/components/ui/button"
 
-import GridPattern from "~/components/ui/grid-pattern"
-import { cn } from "~/lib/utils"
+// import GridPattern from "~/components/ui/grid-pattern"
+// import { cn } from "~/lib/utils"
 
 // export function HeroBackground() {
 // 	return (
@@ -14,21 +14,35 @@ import { cn } from "~/lib/utils"
 export function Hero({ showBlog }: { showBlog: boolean }) {
 	return (
 		<>
-			<GridPattern
+			{/* <GridPattern
 				className={cn(
 					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]"
 				)}
-			/>
-			<div className="relative flex size-full flex-col w-screen max-w-screen-lg h-dvh items-center justify-center container sm:mt-0 mt-32">
+			/> */}
+			<div className="absolute inset-0 -z-50 w-screen h-screen">
+				{/* biome-ignore lint/a11y/useMediaCaption: <explanation> */}
+				<video
+					autoPlay
+					loop
+					playsInline
+					controls={false}
+					preload="metadata"
+					poster="https://cdn.buape.com/oiia-full.gif"
+					className="object-cover w-full h-full"
+				>
+					<source src="https://cdn.buape.com/oiia-song.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<div className="relative flex size-full flex-col w-screen max-w-screen-lg h-dvh items-center justify-end container sm:mt-0 mt-32 pb-28">
 				<Image
-					src={"https://cdn.buape.com/buape_circle.png"}
+					src={"https://cdn.buape.com/oiia.gif"}
 					priority={true}
 					width={256}
 					height={256}
 					alt={"Buape Logo"}
-					className="m-8"
+					className="m-8 opacity-0"
 				/>
-				<span className="text-4xl font-bold text-buape m-2">Buape Studios</span>
+				<span className="text-4xl font-bold text-white m-2">Buape Studios</span>
 				<div className="text-center text-white text-xl font-normal">
 					Welcome to Buape Studios, a development studio committed to{" "}
 					<span className="font-bold">producing quality applications</span>, as

@@ -24,7 +24,7 @@ export function Footer({
 				<div className="flex md:flex-row flex-col md:gap-10 py-20 justify-center">
 					<div className="flex flex-col gap-2 grow shrink-0 md:mb-0 mb-10">
 						<Image
-							src={"https://cdn.buape.com/buape_circle.png"}
+							src={"https://cdn.buape.com/oiia.gif"}
 							width={64}
 							height={64}
 							alt={"Buape Logo"}

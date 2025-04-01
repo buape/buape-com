@@ -37,7 +37,7 @@ export default async function Page(props: {
 					<div className="flex flex-row gap-2 items-center">
 						<Image
 							className="rounded-full"
-							src={author.avatarUrl || "https://cdn.buape.com/buape_circle.png"}
+							src={author.avatarUrl || "https://cdn.buape.com/oiia.gif"}
 							width={32}
 							height={32}
 							alt={`${author.username}'s Avatar`}

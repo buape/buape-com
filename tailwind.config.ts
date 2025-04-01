@@ -23,7 +23,8 @@ const config: Config = {
 		extend: {
 			colors: {
 				dark: "#17171C",
-				buape: "#3F4FAB",
+				// buape: "#3F4FAB",
+				buape: "#03FD11",
 				gray: "#2E2E38",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",

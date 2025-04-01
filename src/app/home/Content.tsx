@@ -151,9 +151,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 			) : data.author ? (
 				<div className="text-sm text-nowrap overflow-clip whitespace-nowrap flex flex-row align-bottom items-center">
 					<Image
-						src={
-							data.author.avatarUrl || "https://cdn.buape.com/buape_circle.png"
-						}
+						src={data.author.avatarUrl || "https://cdn.buape.com/oiia.gif"}
 						width={64}
 						height={64}
 						alt={`${data.author.name}'s Avatar`}

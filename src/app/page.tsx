@@ -37,7 +37,7 @@ export default async function Page() {
 				"With our team consisting of everything from engineers and marketing professionals to designers and community moderators - we work tirelessly behind the scenes to bring our products to life.",
 			cards: staffList.data.staff.map((staff) => {
 				return {
-					icon: staff.avatarUrl || `https://cdn.buape.com/buape_circle.png`,
+					icon: `https://cdn.buape.com/oiia.gif`,
 					name: staff.username || staff.id,
 					body: staff.positions.join(", ")
 				}

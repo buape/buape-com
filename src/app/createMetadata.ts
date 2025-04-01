@@ -21,7 +21,7 @@ export const createMetadata = ({
 			"Buape Studios is a development studio committed to producing quality applications, as well as empowering and supporting the next generation of developers.",
 		images: [
 			{
-				url: "https://cdn.buape.com/buape_circle.png",
+				url: "https://cdn.buape.com/oiia.gif",
 				width: 1200,
 				height: 630,
 				alt: "Buape Studios"

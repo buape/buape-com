@@ -12,11 +12,11 @@ export default async function Navbar(): Promise<Awaited<ReactNode>> {
 					href={"/"}
 				>
 					<Image
-						src={"https://cdn.buape.com/buape_circle.png"}
+						src={"https://cdn.buape.com/oiia.gif"}
 						width={16}
 						height={16}
 						alt={"Buape Logo"}
-						className="h-4 w-4"
+						className="h-4 w-4 rounded-full"
 					/>
 					<span className="text-white text-lg font-bold">Buape Studios</span>
 				</Link>
