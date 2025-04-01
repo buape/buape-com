@@ -33,7 +33,7 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 					<source src="https://cdn.buape.com/oiia-song.mp4" type="video/mp4" />
 				</video>
 			</div>
-			<div className="relative flex size-full flex-col w-screen max-w-screen-lg h-dvh items-center justify-end container sm:mt-0 mt-32 pb-28">
+			<div className="relative flex size-full flex-col w-screen max-w-screen-lg h-dvh items-center justify-end container sm:mt-0 mt-32 lg:pb-28 pb-0">
 				<Image
 					src={"https://cdn.buape.com/oiia.gif"}
 					priority={true}
