@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@opennextjs/cloudflare": "0.4.0",
-		"@types/node": "22.10.2",
+		"@types/node": "22.15.21",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "19.0.2",
 		"clsx": "2.1.1",
