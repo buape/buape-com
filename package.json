@@ -17,7 +17,7 @@
 	"dependencies": {
 		"@radix-ui/react-slot": "1.1.1",
 		"@radix-ui/react-toast": "1.2.3",
-		"@tailwindcss/typography": "0.5.15",
+		"@tailwindcss/typography": "0.5.16",
 		"class-variance-authority": "0.7.1",
 		"fumadocs-core": "14.6.1",
 		"fumadocs-mdx": "11.1.2",
