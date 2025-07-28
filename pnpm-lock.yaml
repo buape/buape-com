@@ -30,8 +30,8 @@ importers:
         specifier: 14.6.1
         version: 14.6.1(@types/react-dom@19.0.2(@types/react@19.0.1))(@types/react@19.0.1)(algoliasearch@4.24.0)(next@14.2.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.16)
       lucide-react:
-        specifier: 0.468.0
-        version: 0.468.0(react@19.0.0)
+        specifier: 0.532.0
+        version: 0.532.0(react@19.0.0)
       next:
         specifier: 14.2.20
         version: 14.2.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1260,6 +1260,7 @@ packages:
 
   '@opennextjs/cloudflare@0.4.0':
     resolution: {integrity: sha512-eN/PU07DKd1UA67Q2HfO30Ni7jSgDrPB5pJbDSx63bJ2uHlE83gyd1MKDnPEK+5mJpcGWFYQFTV5iMkanZAy1w==}
+    deprecated: CVE-2025-6087 was fixed in 1.3.0
     hasBin: true
     peerDependencies:
       wrangler: ^3.105.0
@@ -2855,6 +2856,11 @@ packages:
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
+  lucide-react@0.532.0:
+    resolution: {integrity: sha512-HwmXOIZwuZ21wryFq0ZrwkjAMxI77+jLxLdNzWCiUa/Kf5ozkTFCWT6C1/yapP68uKgj8wlxxqnNCH1xo9NEpg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
 
@@ -4045,7 +4051,7 @@ snapshots:
       '@aws-crypto/sha256-js': 3.0.0
       '@aws-crypto/supports-web-crypto': 3.0.0
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.734.0
       '@aws-sdk/util-locate-window': 3.723.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
@@ -4063,7 +4069,7 @@ snapshots:
   '@aws-crypto/sha256-js@3.0.0':
     dependencies:
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.734.0
       tslib: 1.14.1
 
   '@aws-crypto/sha256-js@5.2.0':
@@ -4082,7 +4088,7 @@ snapshots:
 
   '@aws-crypto/util@3.0.0':
     dependencies:
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.734.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
 
@@ -7484,6 +7490,10 @@ snapshots:
   lru-cache@11.0.2: {}
 
   lucide-react@0.468.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+
+  lucide-react@0.532.0(react@19.0.0):
     dependencies:
       react: 19.0.0
 
