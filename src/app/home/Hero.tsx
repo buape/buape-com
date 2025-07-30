@@ -49,7 +49,7 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 						</Link>
 					) : null}
 					<Link href={"https://discord.gg/bgASSujRMj"} className="w-56">
-						<Button variant={"outline-solid"} className="w-full">
+						<Button variant={"outline"} className="w-full">
 							Join Us on Discord
 						</Button>
 					</Link>

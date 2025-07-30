@@ -11,7 +11,8 @@
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
 		"postinstall": "fumadocs-mdx",
 		"dev": "next dev",
-		"lint": "biome check . --write --diagnostic-level=warn"
+		"lint": "biome check . --write --diagnostic-level=warn",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "1.2.3",
