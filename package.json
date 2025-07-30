@@ -5,14 +5,13 @@
 	"type": "module",
 	"scripts": {
 		"build": "next build",
-		"build:worker": "opennextjs-cloudflare build",
-		"deploy": "pnpm run build:worker && opennextjs-cloudflare deploy",
-		"dev:worker": "wrangler dev --port 8771",
-		"dev": "next dev",
-		"lint": "biome check . --write --diagnostic-level=warn",
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
 		"postinstall": "fumadocs-mdx",
-		"preview:worker": "pnpm run build && pnpm run dev",
-		"start": "next start"
+		"dev": "next dev",
+		"lint": "biome check . --write --diagnostic-level=warn"
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "1.2.3",
