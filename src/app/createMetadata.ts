@@ -11,8 +11,7 @@ export const createMetadata = ({
 	description:
 		description ??
 		"Buape Studios is a development studio committed to producing quality applications, as well as empowering and supporting the next generation of developers.",
-	metadataBase:
-		new URL("https://www.buape.com"),
+	metadataBase: new URL("https://www.buape.com"),
 	twitter: {
 		card: "summary",
 		title: title ?? "Buape Studios",

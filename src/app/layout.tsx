@@ -3,16 +3,14 @@ import { Rubik } from "next/font/google"
 
 import "~/styles/globals.css"
 
-import type { ReactNode } from "react"
-
-import { Toaster } from "~/components/ui/toaster"
-import { cn } from "~/lib/utils"
-import Navbar from "./Navbar"
-
 import Script from "next/script"
+import type { ReactNode } from "react"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
+import { Toaster } from "~/components/ui/toaster"
 import { projects } from "~/lib/data"
+import { cn } from "~/lib/utils"
 import { Footer } from "./home/Footer"
+import Navbar from "./Navbar"
 
 const font = Rubik({
 	subsets: ["latin"]
@@ -22,11 +20,7 @@ export const metadata: Metadata = {
 	title: "Buape Studios"
 }
 
-export default async function Layout({
-	children
-}: {
-	children: ReactNode
-}) {
+export default async function Layout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
 			<body

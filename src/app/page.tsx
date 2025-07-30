@@ -1,16 +1,16 @@
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"
 
-import { sections } from "~/lib/data";
-import { blog } from "~/lib/source";
-import { createMetadata } from "./createMetadata";
-import { ContentSection, JoinTheTeam } from "./home/Content";
-import { Hero } from "./home/Hero";
-import { getStaff } from "~/lib/staff";
+import { sections } from "~/lib/data"
+import { blog } from "~/lib/source"
+import { getStaff } from "~/lib/staff"
+import { createMetadata } from "./createMetadata"
+import { ContentSection, JoinTheTeam } from "./home/Content"
+import { Hero } from "./home/Hero"
 
-export const metadata = createMetadata({});
+export const metadata = createMetadata({})
 
 export default async function Page() {
-	const staffList = await getStaff();
+	const staffList = await getStaff()
 	if (staffList && !sections.find((x) => x.id === "staff"))
 		sections.push({
 			id: "staff",
@@ -21,15 +21,15 @@ export default async function Page() {
 				return {
 					icon: staff.avatarUrl || `https://cdn.buape.com/buape_circle.png`,
 					name: staff.username || staff.id,
-					body: staff.positions.join(", "),
-				};
+					body: staff.positions.join(", ")
+				}
 			}),
-			marquee: true,
-		});
+			marquee: true
+		})
 
 	const posts = [...blog.getPages()].sort(
-		(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-	);
+		(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+	)
 	if (posts.length > 0 && !sections.find((x) => x.id === "blog"))
 		sections.push({
 			id: "blog",
@@ -37,8 +37,8 @@ export default async function Page() {
 			description: `Check out our blog for the latest news and updates.`,
 			cards: posts.map((post) => {
 				const author = staffList?.data.staff.find(
-					(x: { id: string }) => x.id === post.data.authorId,
-				);
+					(x: { id: string }) => x.id === post.data.authorId
+				)
 				return {
 					name: post.data.title,
 					body: post.data.description,
@@ -48,13 +48,13 @@ export default async function Page() {
 								name: author.username!,
 								avatarUrl: author.avatarUrl!,
 								date: new Date(
-									post.data.date.valueOf() + post.data.date.getTimezoneOffset(),
-								),
+									post.data.date.valueOf() + post.data.date.getTimezoneOffset()
+								)
 							}
-						: undefined,
-				};
-			}),
-		});
+						: undefined
+				}
+			})
+		})
 
 	return (
 		<div>
@@ -66,5 +66,5 @@ export default async function Page() {
 			))}
 			<JoinTheTeam />
 		</div>
-	);
+	)
 }

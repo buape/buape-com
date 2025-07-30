@@ -27,6 +27,5 @@ export const pages = defineCollections({
 })
 
 export default defineConfig({
-	generateManifest: true,
 	lastModifiedTime: "none"
 })

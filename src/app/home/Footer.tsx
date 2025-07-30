@@ -17,7 +17,9 @@ type FooterLink = {
 
 export function Footer({
 	projects
-}: { projects: { name: string; link?: string }[] }) {
+}: {
+	projects: { name: string; link?: string }[]
+}) {
 	return (
 		<footer className="flex flex-col bg-dark w-screen gap-5 overflow-hidden">
 			<div className="flex flex-col gap-8 mb-4 md:px-28 px-10 container">

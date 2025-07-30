@@ -6,8 +6,8 @@ import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
 import GridPattern from "~/components/ui/grid-pattern"
 import { blog } from "~/lib/source"
-import { cn } from "~/lib/utils"
 import { getStaff } from "~/lib/staff"
+import { cn } from "~/lib/utils"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>

@@ -2,7 +2,7 @@
 
 export default function GlobalError({
 	error,
-	// biome-ignore lint/correctness/noUnusedVariables: <explanation>
+	// biome-ignore lint/correctness/noUnusedFunctionParameters: ahh
 	reset
 }: {
 	error: Error & { digest?: string }
