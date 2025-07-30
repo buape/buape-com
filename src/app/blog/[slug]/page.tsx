@@ -7,6 +7,7 @@ import { createMetadata } from "~/app/createMetadata"
 import GridPattern from "~/components/ui/grid-pattern"
 import { blog } from "~/lib/source"
 import { cn } from "~/lib/utils"
+import { getStaff } from "~/lib/staff"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
@@ -15,10 +16,8 @@ export default async function Page(props: {
 	const page = blog.getPage([params.slug])
 	if (!page) notFound()
 
-	const staff = await fetch("https://internal.buape.com/staff", {
-		next: { revalidate: 3600 }
-	}).then((res) => res.json())
-
+	const staff = await getStaff()
+	if (!staff) notFound()
 	const author = staff.data.staff.find(
 		(x: { id: string }) => x.id === page.data.authorId
 	)
@@ -27,7 +26,7 @@ export default async function Page(props: {
 		<>
 			<GridPattern
 				className={cn(
-					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)] -z-50"
+					"mask-[linear-gradient(to_bottom,white,transparent,transparent)] -z-50"
 				)}
 			/>
 			<article className="m-10 items-center justify-center bg-neutral-950 p-5 text-white">
@@ -37,12 +36,17 @@ export default async function Page(props: {
 					<div className="flex flex-row gap-2 items-center">
 						<Image
 							className="rounded-full"
-							src={author.avatarUrl || "https://cdn.buape.com/buape_circle.png"}
+							src={
+								author?.avatarUrl || "https://cdn.buape.com/buape_circle.png"
+							}
 							width={32}
 							height={32}
-							alt={`${author.username}'s Avatar`}
+							alt={`${author?.username}'s Avatar`}
+							unoptimized={author?.avatarUrl?.endsWith(".gif")}
 						/>
-						<span className="text-lg font-bold">{author.username}</span>
+						<span className="text-lg font-bold">
+							{author?.username || page.data.authorId}
+						</span>
 						<Dot width={32} height={32} />
 						<span className="text-lg font-bold">
 							{new Date(
@@ -53,7 +57,7 @@ export default async function Page(props: {
 				</header>
 				<main>
 					<div className="prose prose-lg max-w-none p-10">
-						<div className="mt-10">
+						<div className="mt-1">
 							<page.data.body
 								components={{ ...defaultMdxComponents, hr: () => <p>---</p> }}
 							/>

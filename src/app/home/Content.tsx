@@ -158,6 +158,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 						height={64}
 						alt={`${data.author.name}'s Avatar`}
 						className="w-6 h-6 rounded-full mr-2"
+						unoptimized={data.author.avatarUrl?.endsWith(".gif")}
 					/>
 					<span className="text-white font-bold grow w-full text-left">
 						{data.author.name}

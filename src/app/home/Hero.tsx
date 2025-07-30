@@ -16,10 +16,10 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 		<>
 			<GridPattern
 				className={cn(
-					"[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]"
+					"mask-[linear-gradient(to_bottom,white,transparent,transparent)]"
 				)}
 			/>
-			<div className="relative flex size-full flex-col w-screen max-w-screen-lg h-dvh items-center justify-center container sm:mt-0 mt-32">
+			<div className="relative flex size-full flex-col w-screen max-w-(--breakpoint-lg) h-dvh items-center justify-center container sm:mt-0 mt-32">
 				<Image
 					src={"https://cdn.buape.com/buape_circle.png"}
 					priority={true}
@@ -49,7 +49,7 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 						</Link>
 					) : null}
 					<Link href={"https://discord.gg/bgASSujRMj"} className="w-56">
-						<Button variant={"outline"} className="w-full">
+						<Button variant={"outline-solid"} className="w-full">
 							Join Us on Discord
 						</Button>
 					</Link>

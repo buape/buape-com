@@ -1,5 +1,5 @@
 ---
-title: Our Infrastructure
+title: Our Infrastructure - November 2024
 description: A look at the infrastructure that powers Buape Studios
 authorId: "439223656200273932"
 date: 2024-11-08
@@ -7,7 +7,7 @@ date: 2024-11-08
 
 One of the most fun things that I get to play with as the infrastructure manager for Buape Studios is the infrastructure.
 
-We pride ourselves on finding the best value for our tools, and we've done a fantastic job at abusing free tiers over the years to find what works best.
+We pride ourselves on finding the best value for our tools, and we've done a fantastic job at abusing free tiers over the years to find what works best (heh).
 
 ## Authentication
 
@@ -93,7 +93,7 @@ We use Grafana to monitor both statistics and logs for our apps, as well as moni
 
 ### Payments
 
-We use Lemonsqueezy as our Merchant of Record for all our payments, donations, subscriptions, and integrated checkouts. 
+We use Polar as our Merchant of Record for all our payments, donations, subscriptions, and integrated checkouts. 
 
-Lemonsqueezy handles all the global tax compliance, fraud and chargebacks, worldwide payment methods, and recurring billing. We have staff who specifically handle any billing issues that come up.
+Polar handles all the global tax compliance, fraud and chargebacks, worldwide payment methods, and recurring billing. We have staff who specifically handle any billing issues that come up.
 
