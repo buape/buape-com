@@ -77,17 +77,14 @@ export async function generateMetadata(props: {
 
 	if (!page) notFound()
 
-	const staff = await fetch("https://internal.buape.com/staff", {
-		next: { revalidate: 3600 }
-	}).then((res) => res.json())
-
-	const author = staff.data.staff.find(
+	const staff = await getStaff()
+	const author = staff?.data.staff.find(
 		(x: { id: string }) => x.id === page.data.authorId
 	)
 
 	return createMetadata({
 		title: `Blog: ${page.data.title}`,
-		description: `${page.data.description}\n\nWritten by ${author.username} on ${new Date(
+		description: `${page.data.description}\n\nWritten by ${author?.username || page.data.authorId} on ${new Date(
 			page.data.date.valueOf() + page.data.date.getTimezoneOffset()
 		).toLocaleDateString()}`
 	})

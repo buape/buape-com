@@ -12,7 +12,8 @@
 		"postinstall": "fumadocs-mdx",
 		"dev": "next dev",
 		"lint": "biome check . --write --diagnostic-level=warn",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"start": "next start"
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "1.2.3",

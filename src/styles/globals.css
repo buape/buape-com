@@ -7,6 +7,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+button {
+	cursor: pointer;
+}
+
 @theme {
 	--color-dark: #17171c;
 	--color-buape: #3f4fab;
