@@ -40,7 +40,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 				<Script
 					defer
 					src="https://stats.b1.buape.com/script.js"
-					data-website-id="220d5910-f06d-465b-991b-280d8867a803"
+					data-website-id="00ad4bee-f586-43a9-aa02-866d0a69ab1d"
 					data-domains="www.buape.com"
 				/>
 			</body>
