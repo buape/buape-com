@@ -7,19 +7,19 @@ import type { FooterLinkSection } from "~/app/home/Footer"
 export const projects = [
 	{
 		name: "Kiai",
-		icon: "https://cdn-raw.buape.com/Kiai.png",
+		icon: "https://cdn.buape.com/kiai/logo.png",
 		body: "Kiai is a next generation leveling bot designed for Discord servers who want to level up their community.",
 		link: "https://kiai.app"
 	},
 	{
 		name: "JT-99",
-		icon: "https://jt-99.net/images/jt99.png",
+		icon: "https://cdn.buape.com/jt-99/logo.png",
 		body: "JT-99 is a cross-server chat network with a dedicated team of moderators, designed to provide a safe and welcoming environment for all users.",
-		link: "https://jt-99.net"
+		link: "https://jt-99.buape.com"
 	},
 	{
 		name: "Carbon",
-		icon: "https://cdn-raw.buape.com/CarbonLogo.png",
+		icon: "https://cdn.buape.com/carbon/logo.png",
 		body: "Carbon is a powerful and versatile framework designed for building HTTP-based Discord bots. It provides a robust set of tools and features that enable developers to create efficient and scalable bots with ease.",
 		link: "https://carbon.buape.com"
 	}

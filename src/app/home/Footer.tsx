@@ -31,7 +31,9 @@ export function Footer({
 							height={64}
 							alt={"Buape Logo"}
 						/>
-						<span className="text-white text-2xl font-bold">Buape Studios</span>
+						<span className="text-white text-2xl font-bold">
+							Buape Studios, LLC
+						</span>
 						<span className="text-md">
 							Developed by talents worldwide ⚒️
 							<br />
@@ -54,10 +56,10 @@ export function Footer({
 				</div>
 				<div className="align-bottom flex flex-row">
 					<div className="text-neutral-500 grow">
-						© 2025 Buape Studios. All rights reserved.
+						© 2025 Buape Studios LLC. All rights reserved.
 					</div>
 					<div className="flex flex-row gap-2">
-						<Link href="https://twitter.com/buapestudios">
+						<Link href="https://x.com/buapestudios">
 							<FaXTwitter />
 						</Link>
 						<Link href="https://discord.gg/7MUYugRj2T">

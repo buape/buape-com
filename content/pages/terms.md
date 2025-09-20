@@ -1,18 +1,19 @@
 ---
 title: Terms of Service
-description: "Effective Date: July 30, 2025"
+description: "Effective Date: September 20, 2025"
 ---
 
-This document applies to all services hosted and managed by Buape Studios, included, but not limited to:
-- Kiai Discord Bot
-- Kiai.app
-- Buape.com
+This document applies to all services hosted and managed by Buape Studios LLC, included, but not limited to:
+- Buape.com (https://buape.com and all associated domains)
+- Kiai Discord Application (https://kiai.app and all associated domains)
+- JT-99 (https://jt-99.buape.com)
+- Carbon (https://carbon.buape.com)
 
 By using our services, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please refrain from using our services.
 
 
 ## What You Can Expect from Us as the Provider:
-As the provider of our services, Buape Studios is committed to:
+As the provider of our services, Buape Studios LLC is committed to:
 
 Reliability: We strive to maintain the reliability and performance of our services to enhance your Discord experience.
 Transparency: We are transparent about our data collection practices. Please refer to our Privacy Policy for details on how we handle your data.
@@ -25,7 +26,7 @@ By using our services, you agree to comply with and be bound by these Terms of S
 ## 2. Use of our services
 
 ### 2.1. Age Requirement
-You must be at least 13 years old to use our services. By using our services, you affirm that you are over 13 years of age.
+You must be at least 13 years old to use our services. By using our services, you affirm that you are 13 years of age or above.
 
 ### 2.2. Discord Terms
 Your use of our services that are accessed through Discord are also subject to the [Discord Terms of Service](https://discord.com/terms) and [Community Guidelines](https://discord.com/guidelines). Violation of these terms may result in the termination of your access to our services.
@@ -45,7 +46,7 @@ You may not use our services to distribute, upload, or transmit any content that
 ## 5. Privacy Policy
 
 ### 5.1. Data Collection
-Buape Studios will collect and process data related to your use of our services. We only store and process your personal data when you have voluntarily supplied us with it by interacting with our services. By using our services, you consent to the collection and processing of such data in accordance with this Privacy Policy.
+Buape Studios LLC will collect and process data related to your use of our services. We only store and process your personal data when you have voluntarily supplied us with it by interacting with our services. By using our services, you consent to the collection and processing of such data in accordance with this Privacy Policy.
 
 ### 5.2. Data We Collect
 We collect and process the following information which may include your personal data.
@@ -54,19 +55,21 @@ We collect and process the following information which may include your personal
 
 - If you are a premium user and you upload images to our servers, we store the image you uploaded to our servers for the purpose of displaying it within our services. This image is stored indefinitely for longterm use by yourself within our services until deleted from our servers by you or by us via the appropriate command.
 
-- We do not access or store phone numbers for our users, and we do not store emails for any non-paying users.
+- We do not access or store phone numbers for our users.
 
 - We do not store messages from any users using Kiai. We do access message content sent by users, but these are only used in features such as our message content placeholder, and are not saved within our database.
 
+- We do collect anonymous analytics data to help us improve our services. This data may include information about your device, browser type, and usage patterns, but does not contain any personally identifiable information.
+
 ### 5.3. Data Retention: 
-All data relating to the a guild or user is kept for 30 days after a guild has been removed from our services, at which point it will be cleared from our database.
+All data relating to the a guild or user is kept for 30 days after a guild has been removed from our services, at which point it will be permanently and irreversibly deleted from our servers. If you wish to delete your data sooner, please contact us at legal@buape.com
 
 ### 5.4. Disclosure: 
-All data stored within our databases is confidential, and access is only granted to Buape Studios Developers on an as-needed basis. We do NOT sell your personal data and we don’t provide it to anyone outside our organisation for any other purpose than the Service you subscribed for.
+All data stored within our databases is confidential, and access is only granted to contractors of Buape Studios LLC on an as-needed basis. We do NOT sell your personal data and we don’t provide it to anyone outside our organisation for any other purpose than the Service you subscribed for.
 
 ## 6. Refund Policy
 
-Buape Studios does not offer refunds for any purchases related to our services except for extreme situations that have been preapproved by Buape Studios. All transactions are final. If you have concerns about a purchase, please contact us at support@buape.com to discuss the issue. Any attempts to issue a chargeback against us will result in a permanent blacklist from our Services.
+Buape Studios LLC does not offer refunds for any purchases related to our services except for extreme situations that have been preapproved by Buape Studios. All transactions are final. If you have concerns about a purchase, please contact us at support@buape.com to discuss the issue. Any attempts to issue a chargeback against us will result in a permanent and irreversible termination from our Services.
 
 ## 7. Additional Notes
 
@@ -81,5 +84,11 @@ Our services are provided "as is" without any warranty. Buape Studios disclaims 
 Buape Studios is not liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our services.
 
 ### Contact Information:
-If you have any questions or concerns regarding these Terms of Service, please contact us at legal@buape.com.
+If you have any questions or concerns regarding these Terms of Service, please contact us at legal@buape.com or via mail at the address below.
 Thank you for using our services responsibly.
+
+Buape Studios LLC
+4780 I-55 N.
+Suite 100-104
+Jackson MS 39211
+United States

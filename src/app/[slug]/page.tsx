@@ -1,4 +1,6 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
+import { Card, Cards } from "fumadocs-ui/components/card"
+import { Callout } from "fumadocs-ui/components/callout"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
@@ -27,8 +29,8 @@ export default async function Page(props: {
 				</header>
 				<main>
 					<div className="prose prose-lg max-w-none p-10">
-						<div className="mt-10 text-white">
-							<page.data.body components={{ ...defaultMdxComponents }} />
+						<div className="mt-10">
+							<page.data.body components={{ ...defaultMdxComponents, Card, Cards, Callout }} />
 						</div>
 					</div>
 				</main>

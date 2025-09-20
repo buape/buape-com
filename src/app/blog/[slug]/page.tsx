@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import { Dot } from "lucide-react"
 import type { Metadata } from "next"
