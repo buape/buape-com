@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "../../styles/globals.css";
+
+h2 {
+	@apply text-3xl font-bold text-buape mb-6 block;
+}
+
+h3 {
+	@apply text-xl font-bold mb-4;
+}
+
+p {
+	@apply text-base;
+}
+
+.description {
+	@apply text-base mb-6;
+}

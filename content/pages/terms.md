@@ -77,7 +77,7 @@ Buape Studios reserves the right to terminate your access to our services at any
 
 Buape Studios may update these Terms of Service at any time. Continued use of our services after such changes constitutes acceptance of the modified terms.
 
-## 9. Disclaimer of Warranty
+## 8. Disclaimer of Warranty
 
 Our services are provided "as is" without any warranty. Buape Studios disclaims all warranties, express or implied, regarding our services's reliability and performance.
 
@@ -88,7 +88,11 @@ If you have any questions or concerns regarding these Terms of Service, please c
 Thank you for using our services responsibly.
 
 Buape Studios LLC
+
 4780 I-55 N.
+
 Suite 100-104
+
 Jackson MS 39211
+
 United States

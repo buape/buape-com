@@ -12,7 +12,7 @@ export function ClickToCopy({
 	const handleCopy = async () => {
 		try {
 			await navigator.clipboard.writeText(toCopy)
-			toast("Copied to clipboard")
+			toast(`Copied to clipboard: ${toCopy}`)
 		} catch (err) {
 			console.error("Failed to copy: ", err)
 		}

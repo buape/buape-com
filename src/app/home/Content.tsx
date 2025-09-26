@@ -32,11 +32,11 @@ export function ContentSection(data: ContentSectionData) {
 	const firstRow = data.cards.slice(0, data.cards.length / 2)
 	const secondRow = data.cards.slice(data.cards.length / 2)
 	return (
-		<section className="w-screen bg-[#101013] border border-gray py-20 items-center">
-			<div
-				className="max-w-full flex flex-col gap-4 text-center items-center justify-center px-24 lg:px-48"
-				id={data.id}
-			>
+		<section
+			id={data.id}
+			className="w-screen bg-[#101013] border border-gray py-20 items-center"
+		>
+			<div className="max-w-full flex flex-col gap-4 text-center items-center justify-center px-24 lg:px-48">
 				<span className="text-3xl font-bold text-buape">{data.title}</span>
 				<div className="text-white text-lg font-normal whitespace-pre-wrap">
 					{data.description}
