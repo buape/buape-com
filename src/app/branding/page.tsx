@@ -71,7 +71,7 @@ function LogoSection({
 		<>
 			<h3>{title}</h3>
 			<div className="description">{description}</div>
-			<div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-3">
+			<div className="mb-8 grid sm:grid-cols-2 gap-3 md:grid-cols-3">
 				{logos.map((logo, i) => {
 					return <LogoCard key={`${logo.title}-${i}`} {...logo} />
 				})}
