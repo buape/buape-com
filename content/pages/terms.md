@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-description: "Effective Date: September 20, 2025"
+description: "Effective Date: October 17, 2025"
 ---
 
 This document applies to all services hosted and managed by Buape Studios LLC, included, but not limited to:
@@ -8,6 +8,7 @@ This document applies to all services hosted and managed by Buape Studios LLC, i
 - Kiai Discord Application (https://kiai.app and all associated domains)
 - JT-99 (https://jt-99.buape.com)
 - Carbon (https://carbon.buape.com)
+- Message Kit (https://messagekit.app)
 
 By using our services, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please refrain from using our services.
 

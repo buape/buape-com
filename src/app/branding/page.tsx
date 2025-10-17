@@ -97,7 +97,7 @@ export default function BrandingPage() {
 				<header className="flex flex-col gap-10 items-center m-5 pb-5 mt-32">
 					<h1 className="text-4xl font-bold text-white">Branding Guide</h1>
 					<span className="text-xl font-normal text-white text-center">
-						Last updated: September 20, 2025
+						Last updated: October 17, 2025
 					</span>
 				</header>
 				<main className="w-screen bg-[#101013] py-20 flex flex-col gap-4 text-left px-24 lg:px-48 prose prose-lg max-w-none text-white mt-10">
@@ -299,10 +299,33 @@ export default function BrandingPage() {
 							}
 						]}
 					/>
+					<LogoSection
+						title="Message Kit"
+						description={
+							<>
+								Standard usage guidelines apply. Link to{" "}
+								<a
+									href="https://messagekit.app"
+									className="text-blue-400 hover:text-blue-300"
+								>
+									messagekit.app
+								</a>{" "}
+								when referencing Message Kit.
+							</>
+						}
+						logos={[
+							{
+								title: "Logo",
+								src: "https://cdn.buape.com/message-kit/logo.png",
+								alt: "Message Kit Logo",
+								description: "Standard Message Kit logo"
+							}
+						]}
+					/>	
 					<h2>Usage Permissions</h2>
 					<h3>General Usage Rights</h3>
 					<p>
-						Our logos (Kiai, Carbon, JT-99, and Buape) may be used anywhere to
+						Our logos (Kiai, Carbon, JT-99, Message Kit, and Buape) may be used anywhere to
 						directly refer to Buape Studios{" "}
 						<strong>without prior permission</strong>, provided you follow the
 						guidelines below. <br />

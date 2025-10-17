@@ -18,6 +18,10 @@ const config = {
 			},
 			{
 				protocol: "https",
+				hostname: "messagekit.app"
+			},
+			{
+				protocol: "https",
 				hostname: "cdn.discordapp.com"
 			}
 		]

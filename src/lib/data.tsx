@@ -22,6 +22,12 @@ export const projects = [
 		icon: "https://cdn.buape.com/carbon/logo.png",
 		body: "Carbon is a powerful and versatile framework designed for building HTTP-based Discord bots. It provides a robust set of tools and features that enable developers to create efficient and scalable bots with ease.",
 		link: "https://carbon.buape.com"
+	},
+	{
+		name: "Message Kit",
+		icon: "https://cdn.buape.com/message-kit/logo.png",
+		body: "Message Kit is a powerful tool that enables you to build fully custom Discord messages and components (using the new Components V2 system) directly to your Discord server. You can even be able to hook up 'Actions' to components to carry out certain tasks.",
+		link: "https://carbon.buape.com"
 	}
 	// {
 	// 	name: "Bolt",
