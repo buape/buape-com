@@ -27,7 +27,7 @@ export const projects = [
 		name: "Message Kit",
 		icon: "https://cdn.buape.com/message-kit/logo.png",
 		body: "Message Kit is a powerful tool that enables you to build fully custom Discord messages and components (using the new Components V2 system) directly to your Discord server. You can even be able to hook up 'Actions' to components to carry out certain tasks.",
-		link: "https://carbon.buape.com"
+		link: "https://messagekit.app"
 	}
 	// {
 	// 	name: "Bolt",
