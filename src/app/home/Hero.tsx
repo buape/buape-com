@@ -42,7 +42,7 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 						</Button>
 					</Link>
 					{showBlog ? (
-						<Link href={"/blog"} className="w-56">
+						<Link href={"#blog"} className="w-56">
 							<Button variant={"default"} className="w-full">
 								Our Blog
 							</Button>
