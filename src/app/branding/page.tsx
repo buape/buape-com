@@ -82,7 +82,7 @@ function LogoSection({
 
 export const metadata: Metadata = createMetadata({
 	title: "Branding Guide",
-	description: "Last updated: September 26, 2025"
+	description: "Last updated: October 25, 2025"
 })
 
 export default function BrandingPage() {
@@ -135,6 +135,18 @@ export default function BrandingPage() {
 								src: "https://cdn.buape.com/buape_circle.png",
 								alt: "Buape Circle Logo",
 								description: "Circular variant for profile pictures and icons"
+							},
+							{
+								title: "Wordmark",
+								src: "https://cdn.buape.com/buape_wordmark.png",
+								alt: "Buape Wordmark",
+								description: "Buape Studios wordmark logo"
+							},
+							{
+								title: "Wordmark Transparent",
+								src: "https://cdn.buape.com/buape_wordmark_transparent.png",
+								alt: "Buape Wordmark Transparent",
+								description: "Buape Studios transparent wordmark variant"
 							},
 							{
 								title: "Buape Color",
@@ -321,12 +333,12 @@ export default function BrandingPage() {
 								description: "Standard Message Kit logo"
 							}
 						]}
-					/>	
+					/>
 					<h2>Usage Permissions</h2>
 					<h3>General Usage Rights</h3>
 					<p>
-						Our logos (Kiai, Carbon, JT-99, Message Kit, and Buape) may be used anywhere to
-						directly refer to Buape Studios{" "}
+						Our logos (Kiai, Carbon, JT-99, Message Kit, and Buape) may be used
+						anywhere to directly refer to Buape Studios{" "}
 						<strong>without prior permission</strong>, provided you follow the
 						guidelines below. <br />
 						When using our logos, please ensure they are used to accurately
