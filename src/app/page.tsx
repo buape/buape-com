@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic"
 
-import { sections } from "~/lib/data"
+import { sections as getSections } from "~/lib/data"
 import { payload } from "~/lib/payload"
 import { getStaff } from "~/lib/staff"
 import { createMetadata } from "./createMetadata"
@@ -11,6 +11,7 @@ export const metadata = createMetadata({})
 
 export default async function Page() {
 	const staffList = await getStaff()
+	const sections = await getSections()
 	if (staffList && !sections.find((x) => x.id === "staff"))
 		sections.push({
 			id: "staff",

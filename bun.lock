@@ -4,7 +4,7 @@
     "": {
       "name": "buape-com",
       "dependencies": {
-        "@buape/cms-types": "0.20251108.3",
+        "@buape/cms-types": "0.20251108.4",
         "@payloadcms/live-preview": "^3.63.0",
         "@payloadcms/richtext-lexical": "^3.63.0",
         "@payloadcms/sdk": "^3.63.0",
@@ -208,7 +208,7 @@
 
     "@borewit/text-codec": ["@borewit/text-codec@0.1.1", "", {}, "sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA=="],
 
-    "@buape/cms-types": ["@buape/cms-types@0.20251108.3", "", {}, "sha512-Y3IblLdRbKO3svWCh2GGewvMy9CG2JzHQQLJVZTzfWwcNDOHA7SnlW87NnZbBDYOrKj4XdZR/Sj0rgs9CDgMiQ=="],
+    "@buape/cms-types": ["@buape/cms-types@0.20251108.4", "", {}, "sha512-HmES1gi8bQ+EbnaJmEFTXjhOiUrOd+XiuQPPNrL1OQvbAHYQvZiRkb4vXoEYsPbqf2C8z1zo8rpVT3pguJCYbQ=="],
 
     "@cloudflare/kv-asset-handler": ["@cloudflare/kv-asset-handler@0.4.0", "", { "dependencies": { "mime": "3.0.0" } }, "sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA=="],
 
