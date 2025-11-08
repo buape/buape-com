@@ -13,7 +13,7 @@ export const headingConverter: JSXConverters<SerializedHeadingNode> = {
 				.replace(/[^a-z0-9-]/g, "")
 			return <h2 id={id}>{text}</h2>
 		} else {
-			const text = nodesToJSX({ nodes: node.children }).join("")
+			const text = nodesToJSX({ nodes: node.children })
 			const Tag = node.tag
 			return <Tag>{text}</Tag>
 		}

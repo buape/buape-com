@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
+import { RefreshRouteOnSave } from "~/components/RefreshOnSave"
 import { RichText } from "~/components/RichText"
 import GridPattern from "~/components/ui/grid-pattern"
 import { payload } from "~/lib/payload"
@@ -35,6 +36,7 @@ export default async function Page(props: {
 
 	return (
 		<>
+			<RefreshRouteOnSave />
 			<GridPattern
 				className={cn(
 					"mask-[linear-gradient(to_bottom,white,transparent,transparent)]"
