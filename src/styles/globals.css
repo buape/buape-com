@@ -203,7 +203,7 @@ button {
 		@apply border-l-4 border-primary/50 pl-4 italic my-4;
 	}
 
-	a {
+	.link {
 		@apply text-buape hover:underline hover:text-buape/80;
 	}
 }
