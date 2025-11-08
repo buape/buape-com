@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic"
 
 import { sections } from "~/lib/data"
-import { blog } from "~/lib/source"
+import { payload } from "~/lib/payload"
 import { getStaff } from "~/lib/staff"
 import { createMetadata } from "./createMetadata"
 import { ContentSection, JoinTheTeam } from "./home/Content"
@@ -27,8 +27,23 @@ export default async function Page() {
 			marquee: true
 		})
 
-	const posts = [...blog.getPages()].sort(
-		(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+	const posts = (
+		await payload.find({
+			collection: "buape-com-posts",
+			where: {
+				and: [
+					{
+						status: {
+							equals: "published"
+						}
+					}
+				]
+			}
+		})
+	).docs.sort(
+		(a, b) =>
+			new Date(b.publishedAt ?? b.createdAt).getTime() -
+			new Date(a.publishedAt ?? a.createdAt).getTime()
 	)
 	if (posts.length > 0 && !sections.find((x) => x.id === "blog"))
 		sections.push({
@@ -36,20 +51,23 @@ export default async function Page() {
 			title: "Our Blog",
 			description: `Check out our blog for the latest news and updates.`,
 			cards: posts.map((post) => {
-				const author = staffList?.data.staff.find(
-					(x: { id: string }) => x.id === post.data.authorId
+				const author = staffList?.data.staff.find((x: { id: string }) => {
+					const authorId =
+						typeof post.author === "string" ? post.author : post.author.id
+					return x.id === authorId
+				})
+				const publishedDate = new Date(
+					post.publishedAt ?? post.createdAt ?? new Date()
 				)
 				return {
-					name: post.data.title,
-					body: post.data.description,
-					link: `/blog/${post.slugs.join("/")}`,
+					name: post.title,
+					body: post.description,
+					link: `/blog/${post.slug}`,
 					author: author
 						? {
 								name: author.username!,
 								avatarUrl: author.avatarUrl!,
-								date: new Date(
-									post.data.date.valueOf() + post.data.date.getTimezoneOffset()
-								)
+								date: publishedDate
 							}
 						: undefined
 				}

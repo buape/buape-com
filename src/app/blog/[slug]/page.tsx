@@ -129,7 +129,3 @@ export async function generateMetadata(props: {
 		).toLocaleDateString()}`
 	})
 }
-
-export function generateStaticParams(): { slug: string }[] {
-	return []
-}
