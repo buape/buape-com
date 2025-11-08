@@ -24,7 +24,7 @@
 		"@radix-ui/react-toast": "1.2.14",
 		"@tailwindcss/typography": "0.5.16",
 		"class-variance-authority": "0.7.1",
-		"fumadocs-core": "15.6.7",
+		"fumadocs-core": "15.8.5",
 		"fumadocs-mdx": "11.7.1",
 		"fumadocs-ui": "15.6.7",
 		"lucide-react": "0.534.0",
