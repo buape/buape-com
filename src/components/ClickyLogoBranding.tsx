@@ -1,6 +1,6 @@
 "use client"
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 export function ClickyLogoBranding() {

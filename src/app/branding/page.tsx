@@ -1,16 +1,16 @@
 import "./styles.css"
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-	CardDescription
-} from "~/components/ui/card"
 import type { Metadata } from "next"
 import Image from "next/image"
 import type { ReactNode } from "react"
 import { createMetadata } from "~/app/createMetadata"
 import { ClickToCopy } from "~/components/ClickToCopy"
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle
+} from "~/components/ui/card"
 import GridPattern from "~/components/ui/grid-pattern"
 import { cn } from "~/lib/utils"
 

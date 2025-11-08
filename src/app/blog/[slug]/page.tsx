@@ -1,13 +1,13 @@
 export const dynamic = "force-dynamic"
 
-import defaultMdxComponents from "fumadocs-ui/mdx"
 import { Dot } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
+import { RichText } from "~/components/RichText"
 import GridPattern from "~/components/ui/grid-pattern"
-import { blog } from "~/lib/source"
+import { payload } from "~/lib/payload"
 import { getStaff } from "~/lib/staff"
 import { cn } from "~/lib/utils"
 
@@ -15,14 +15,34 @@ export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
-	const page = blog.getPage([params.slug])
-	if (!page) notFound()
+	const page = (
+		await payload.find({
+			collection: "buape-com-posts",
+			where: {
+				and: [
+					{
+						slug: {
+							equals: params.slug
+						}
+					},
+					{
+						status: {
+							equals: "published"
+						}
+					}
+				]
+			}
+		})
+	).docs[0]
 
+	if (!page) notFound()
 	const staff = await getStaff()
 	if (!staff) notFound()
-	const author = staff.data.staff.find(
-		(x: { id: string }) => x.id === page.data.authorId
-	)
+	const authorId =
+		typeof page.author === "string" ? page.author : page.author.id
+	const author = staff.data.staff.find((x: { id: string }) => x.id === authorId)
+
+	const publishedDate = new Date(page.publishedAt ?? page.createdAt)
 
 	return (
 		<>
@@ -33,8 +53,8 @@ export default async function Page(props: {
 			/>
 			<article className="relative flex size-full flex-col w-screen max-w-(--breakpoint-lg) min-h-dvh items-center justify-center container">
 				<header className="flex flex-col gap-10 items-center m-5 pb-5 mt-32 text-center">
-					<h1 className="text-3xl font-bold">{page.data.title}</h1>
-					<h2 className="text-xl font-bold">{page.data.description}</h2>
+					<h1 className="text-3xl font-bold">{page.title}</h1>
+					<h2 className="text-xl font-bold">{page.description}</h2>
 					<div className="flex flex-row gap-2 items-center">
 						<Image
 							className="rounded-full"
@@ -47,21 +67,19 @@ export default async function Page(props: {
 							unoptimized={author?.avatarUrl?.endsWith(".gif")}
 						/>
 						<span className="text-lg font-bold">
-							{author?.username || page.data.authorId}
+							{author?.username || authorId}
 						</span>
 						<Dot width={32} height={32} />
 						<span className="text-lg font-bold">
 							{new Date(
-								page.data.date.valueOf() + page.data.date.getTimezoneOffset()
+								publishedDate.valueOf() + publishedDate.getTimezoneOffset()
 							).toLocaleDateString()}
 						</span>
 					</div>
 				</header>
 				<main className="w-screen bg-[#101013] py-20">
 					<div className="max-w-full flex flex-col gap-4 text-left px-12 md:px-24 lg:px-48 prose prose-lg text-white">
-						<page.data.body
-							components={{ ...defaultMdxComponents, hr: () => <p>---</p> }}
-						/>
+						<RichText data={page.content} />
 					</div>
 				</main>
 			</article>
@@ -73,19 +91,39 @@ export async function generateMetadata(props: {
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const params = await props.params
-	const page = blog.getPage([params.slug])
+	const page = (
+		await payload.find({
+			collection: "buape-com-posts",
+			where: {
+				and: [
+					{
+						slug: {
+							equals: params.slug
+						}
+					},
+					{
+						status: {
+							equals: "published"
+						}
+					}
+				]
+			}
+		})
+	).docs[0]
 
 	if (!page) notFound()
 
 	const staff = await getStaff()
 	const author = staff?.data.staff.find(
-		(x: { id: string }) => x.id === page.data.authorId
+		(x: { id: string }) =>
+			x.id === (typeof page.author === "string" ? page.author : page.author.id)
 	)
 
 	return createMetadata({
-		title: `Blog: ${page.data.title}`,
-		description: `${page.data.description}\n\nWritten by ${author?.username || page.data.authorId} on ${new Date(
-			page.data.date.valueOf() + page.data.date.getTimezoneOffset()
+		title: `Blog: ${page.title}`,
+		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)} on ${new Date(
+			new Date(page.publishedAt ?? page.createdAt).valueOf() +
+				new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
 		).toLocaleDateString()}`
 	})
 }

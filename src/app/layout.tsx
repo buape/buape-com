@@ -6,11 +6,11 @@ import "~/styles/globals.css"
 import Script from "next/script"
 import type { ReactNode } from "react"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
+import { Toaster } from "~/components/ui/sonner"
 import { projects } from "~/lib/data"
 import { cn } from "~/lib/utils"
 import { Footer } from "./home/Footer"
 import Navbar from "./Navbar"
-import { Toaster } from "~/components/ui/sonner"
 
 const font = Rubik({
 	subsets: ["latin"]
