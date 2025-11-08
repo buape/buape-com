@@ -9,7 +9,6 @@
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-		"postinstall": "fumadocs-mdx",
 		"dev": "next dev",
 		"lint": "biome check . --write --diagnostic-level=warn",
 		"typecheck": "tsc --noEmit",
