@@ -1,5 +1,4 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
-import { createMDX } from "fumadocs-mdx/next"
 
 initOpenNextCloudflareForDev()
 
@@ -28,6 +27,4 @@ const config = {
 	}
 }
 
-const withMDX = createMDX()
-
-export default withMDX(config)
+export default config
