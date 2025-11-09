@@ -30,16 +30,7 @@ export default async function Page() {
 
 	const posts = (
 		await payload.find({
-			collection: "buape-com-posts",
-			where: {
-				and: [
-					{
-						status: {
-							equals: "published"
-						}
-					}
-				]
-			}
+			collection: "buape-com-posts"
 		})
 	).docs.sort(
 		(a, b) =>

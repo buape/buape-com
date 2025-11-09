@@ -15,18 +15,9 @@ export default async function Page(props: {
 		await payload.find({
 			collection: "buape-com-pages",
 			where: {
-				and: [
-					{
-						slug: {
-							equals: params.slug
-						}
-					},
-					{
-						status: {
-							equals: "published"
-						}
-					}
-				]
+				slug: {
+					equals: params.slug
+				}
 			}
 		})
 	).docs[0]
@@ -64,18 +55,9 @@ export async function generateMetadata(props: {
 		await payload.find({
 			collection: "buape-com-pages",
 			where: {
-				and: [
-					{
-						slug: {
-							equals: params.slug
-						}
-					},
-					{
-						status: {
-							equals: "published"
-						}
-					}
-				]
+				slug: {
+					equals: params.slug
+				}
 			}
 		})
 	).docs[0]
