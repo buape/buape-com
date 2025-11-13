@@ -1,10 +1,11 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "buape-com",
       "dependencies": {
-        "@buape/cms-types": "^0.20251108.5",
+        "@buape/cms-types": "^0.20251113.2",
         "@payloadcms/live-preview": "^3.63.0",
         "@payloadcms/richtext-lexical": "^3.63.0",
         "@payloadcms/sdk": "^3.63.0",
@@ -208,7 +209,7 @@
 
     "@borewit/text-codec": ["@borewit/text-codec@0.1.1", "", {}, "sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA=="],
 
-    "@buape/cms-types": ["@buape/cms-types@0.20251108.5", "", {}, "sha512-ZjvHpsOc2PKljri+XtTTGljwVqk4p5ZTM+Gc/t6L4NXm9DOxdcVmoLTX9i32b4TTclRiFUbIpClQ+aFIF3Oewg=="],
+    "@buape/cms-types": ["@buape/cms-types@0.20251113.2", "", {}, "sha512-hhq4veMlQn2jTx5ygcBbByTOOuII3eSryzLjykZtKcyGIXaOQWioZRg8C9BXIsYAPY8wjHyiaDix2b36s32c4w=="],
 
     "@cloudflare/kv-asset-handler": ["@cloudflare/kv-asset-handler@0.4.0", "", { "dependencies": { "mime": "3.0.0" } }, "sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA=="],
 

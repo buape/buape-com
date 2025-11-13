@@ -39,10 +39,13 @@ export const projects = [
 ]
 
 export const sections: () => Promise<ContentSectionData[]> = async () => {
-	const testimonials = await payload.find({
-		collection: "buape-com-testimonials",
-		sort: "createdAt"
-	})
+	const testimonials =
+		(
+			await payload.find({
+				collection: "buape-com-testimonials",
+				sort: "createdAt"
+			})
+		)?.docs || []
 	return [
 		{
 			id: "projects",
@@ -56,7 +59,7 @@ export const sections: () => Promise<ContentSectionData[]> = async () => {
 			title: "We Do It Best",
 			description: `1,200+ communities, 1,100,000+ users.
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
-			cards: testimonials.docs.map((x) => {
+			cards: testimonials.map((x) => {
 				return {
 					name: x.name,
 					body: x.body,

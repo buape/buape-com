@@ -15,7 +15,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@buape/cms-types": "^0.20251108.5",
+		"@buape/cms-types": "^0.20251113.2",
 		"@payloadcms/live-preview": "^3.63.0",
 		"@payloadcms/richtext-lexical": "^3.63.0",
 		"@payloadcms/sdk": "^3.63.0",
