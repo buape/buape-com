@@ -32,11 +32,12 @@ export default async function Page() {
 		await payload.find({
 			collection: "buape-com-posts"
 		})
-	).docs.sort(
-		(a, b) =>
-			new Date(b.publishedAt ?? b.createdAt).getTime() -
-			new Date(a.publishedAt ?? a.createdAt).getTime()
-	)
+	).docs
+	// .sort(
+	// 	(a, b) =>
+	// 		new Date(b.publishedAt ?? b.createdAt).getTime() -
+	// 		new Date(a.publishedAt ?? a.createdAt).getTime()
+	// )
 	if (posts.length > 0 && !sections.find((x) => x.id === "blog"))
 		sections.push({
 			id: "blog",
@@ -48,9 +49,9 @@ export default async function Page() {
 						typeof post.author === "string" ? post.author : post.author.id
 					return x.id === authorId
 				})
-				const publishedDate = new Date(
-					post.publishedAt ?? post.createdAt ?? new Date()
-				)
+				// const publishedDate = new Date(
+				// 	post.publishedAt ?? post.createdAt ?? new Date()
+				// )
 				return {
 					name: post.title,
 					body: post.description,
@@ -59,7 +60,7 @@ export default async function Page() {
 						? {
 								name: author.username!,
 								avatarUrl: author.avatarUrl!,
-								date: publishedDate
+								// date: publishedDate
 							}
 						: undefined
 				}

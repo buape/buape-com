@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic"
 
-import { Dot } from "lucide-react"
+// import { Dot } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -34,7 +34,7 @@ export default async function Page(props: {
 		typeof page.author === "string" ? page.author : page.author.id
 	const author = staff.data.staff.find((x: { id: string }) => x.id === authorId)
 
-	const publishedDate = new Date(page.publishedAt ?? page.createdAt)
+	// const publishedDate = new Date(page.publishedAt ?? page.createdAt)
 
 	return (
 		<>
@@ -62,12 +62,12 @@ export default async function Page(props: {
 						<span className="text-lg font-bold">
 							{author?.username || authorId}
 						</span>
-						<Dot width={32} height={32} />
+						{/* <Dot width={32} height={32} />
 						<span className="text-lg font-bold">
 							{new Date(
 								publishedDate.valueOf() + publishedDate.getTimezoneOffset()
 							).toLocaleDateString()}
-						</span>
+						</span> */}
 					</div>
 				</header>
 				<main className="w-screen bg-[#101013] py-20">
@@ -105,9 +105,10 @@ export async function generateMetadata(props: {
 
 	return createMetadata({
 		title: `Blog: ${page.title}`,
-		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)} on ${new Date(
-			new Date(page.publishedAt ?? page.createdAt).valueOf() +
-				new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
-		).toLocaleDateString()}`
+		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)}`
+		//  on ${new Date(
+		// 	new Date(page.publishedAt ?? page.createdAt).valueOf() +
+		// 		new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
+		// ).toLocaleDateString()}`
 	})
 }

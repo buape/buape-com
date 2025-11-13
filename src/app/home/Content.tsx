@@ -17,7 +17,7 @@ type ContentCardData = {
 	author?: {
 		avatarUrl: string
 		name: string
-		date: Date
+		date?: Date
 	}
 }
 export type ContentSectionData = {
@@ -163,9 +163,11 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 					<span className="text-white font-bold grow w-full text-left">
 						{data.author.name}
 					</span>{" "}
-					<span className="text-sm text-gray-400">
-						{data.author.date.toLocaleDateString()}
-					</span>
+					{data.author.date ? (
+						<span className="text-sm text-gray-400">
+							{data.author.date.toLocaleDateString()}
+						</span>
+					) : null}
 				</div>
 			) : null}
 		</Link>
