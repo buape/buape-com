@@ -33,7 +33,7 @@
 		"sharp": "0.34.3",
 		"sonner": "^2.0.7",
 		"tailwindcss-animate": "1.0.7",
-		"zod": "4.0.14"
+		"zod": "4.1.12"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.3",
