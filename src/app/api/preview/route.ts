@@ -40,5 +40,7 @@ export async function GET(request: Request) {
 	const draft = await draftMode()
 	draft.enable()
 
+	console.log(secret, type, slug)
+
 	redirect(type === "post" ? `/blog/${post.slug}` : `/${post.slug}`)
 }

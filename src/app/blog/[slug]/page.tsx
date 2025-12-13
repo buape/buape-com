@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic"
-
 // import { Dot } from "lucide-react"
 import type { Metadata } from "next"
 import { draftMode } from "next/headers"
@@ -29,6 +27,8 @@ export default async function Page(props: {
 			}
 		})
 	).docs[0]
+
+	console.log(isDraftMode, page?.id)
 
 	if (!page) notFound()
 	const staff = await getStaff()
