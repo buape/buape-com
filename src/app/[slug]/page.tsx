@@ -54,9 +54,11 @@ export async function generateMetadata(props: {
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const params = await props.params
+	const { isEnabled: isDraftMode } = await draftMode()
 	const page = (
 		await payload.find({
 			collection: "buape-com-pages",
+			draft: isDraftMode,
 			where: {
 				slug: {
 					equals: params.slug
