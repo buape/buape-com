@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { draftMode } from "next/headers"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
 import { RefreshRouteOnSave } from "~/components/RefreshOnSave"
@@ -11,9 +12,11 @@ export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
+	const { isEnabled: isDraftMode } = await draftMode()
 	const page = (
 		await payload.find({
 			collection: "buape-com-pages",
+			draft: isDraftMode,
 			where: {
 				slug: {
 					equals: params.slug

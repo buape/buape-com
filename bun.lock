@@ -6,7 +6,7 @@
       "name": "buape-com",
       "dependencies": {
         "@buape/cms-types": "^0.20251113.2",
-        "@payloadcms/live-preview": "^3.63.0",
+        "@payloadcms/live-preview-react": "^3.68.3",
         "@payloadcms/richtext-lexical": "^3.63.0",
         "@payloadcms/sdk": "^3.63.0",
         "@radix-ui/react-slot": "1.2.3",
@@ -483,7 +483,9 @@
 
     "@payloadcms/graphql": ["@payloadcms/graphql@3.63.0", "", { "dependencies": { "graphql-scalars": "1.22.2", "pluralize": "8.0.0", "ts-essentials": "10.0.3", "tsx": "4.20.6" }, "peerDependencies": { "graphql": "^16.8.1", "payload": "3.63.0" }, "bin": { "payload-graphql": "bin.js" } }, "sha512-BPDu/LN8/SWsI0BorfBbxdx6yhcU3cdCmCA9EXtyCJF5rMxfderjQ43Jr1WujFz7fwT3i7MEsJ0JE3dQOCUn3Q=="],
 
-    "@payloadcms/live-preview": ["@payloadcms/live-preview@3.63.0", "", {}, "sha512-ShYsfgWYuxMmzziF3/1tdz1AAlfBBndvEJKL6b0H4HiGVY/uS2xGp/O9utYH+NZ8FoUScMVkwwR0bVk04nmd8g=="],
+    "@payloadcms/live-preview": ["@payloadcms/live-preview@3.68.3", "", {}, "sha512-oD3/5g9NbkrHCET3cyecg2hySw+Cg0kx2hwOYHqS9FjQOkLVJHoWx7PszP+B3KQUuAuS3SH3ynfMu60qRAC/RQ=="],
+
+    "@payloadcms/live-preview-react": ["@payloadcms/live-preview-react@3.68.3", "", { "dependencies": { "@payloadcms/live-preview": "3.68.3" }, "peerDependencies": { "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.1 || ^19.1.2 || ^19.2.1", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.1 || ^19.1.2 || ^19.2.1" } }, "sha512-pDFeJqKEOhsALXhwVnDalUCLiiwSFXwsvVZrdixFc6P8bN/ULCF6mkwqt6eidSWO408HI/IBVnlHPF00nvippg=="],
 
     "@payloadcms/next": ["@payloadcms/next@3.63.0", "", { "dependencies": { "@dnd-kit/core": "6.0.8", "@payloadcms/graphql": "3.63.0", "@payloadcms/translations": "3.63.0", "@payloadcms/ui": "3.63.0", "busboy": "^1.6.0", "dequal": "2.0.3", "file-type": "19.3.0", "graphql-http": "^1.22.0", "graphql-playground-html": "1.6.30", "http-status": "2.1.0", "path-to-regexp": "6.3.0", "qs-esm": "7.0.2", "sass": "1.77.4", "uuid": "10.0.0" }, "peerDependencies": { "graphql": "^16.8.1", "next": "^15.2.3", "payload": "3.63.0" } }, "sha512-crS0uU/KFrHTbq4Fut+7NxtMAQwEJNwzm5DOJLWBWLR9HEMZwbfVSAKU9AvManMg5TEFgWSWVk1uD1vg0ANhOw=="],
 

@@ -7,4 +7,5 @@
 		"next/router.d.ts",
 		"next/dist/client/router.d.ts"
 	],
+	"cSpell.words": ["payloadcms"]
 }

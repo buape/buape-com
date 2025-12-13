@@ -59,7 +59,7 @@ export default async function Page() {
 					author: author
 						? {
 								name: author.username!,
-								avatarUrl: author.avatarUrl!,
+								avatarUrl: author.avatarUrl!
 								// date: publishedDate
 							}
 						: undefined

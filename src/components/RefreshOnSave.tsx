@@ -1,43 +1,14 @@
 "use client"
+import { RefreshRouteOnSave as PayloadLivePreview } from "@payloadcms/live-preview-react"
+import { useRouter } from "next/navigation.js"
 
-import { isDocumentEvent, ready } from "@payloadcms/live-preview"
-import { useRouter } from "next/navigation"
-import type React from "react"
-import { useCallback, useEffect, useRef } from "react"
-
-export const RefreshRouteOnSave: React.FC = () => {
+export const RefreshRouteOnSave = () => {
 	const router = useRouter()
 
-	const hasSentReadyMessage = useRef<boolean>(false)
-
-	const onMessage = useCallback(
-		(event: MessageEvent) => {
-			if (isDocumentEvent(event, "https://cms.buape.com/api")) {
-				router.refresh()
-			}
-		},
-		[router]
+	return (
+		<PayloadLivePreview
+			refresh={() => router.refresh()}
+			serverURL={"https://cms.buape.com/admin"}
+		/>
 	)
-
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			window.addEventListener("message", onMessage)
-		}
-
-		if (!hasSentReadyMessage.current) {
-			hasSentReadyMessage.current = true
-
-			ready({
-				serverURL: "https://cms.buape.com/api"
-			})
-		}
-
-		return () => {
-			if (typeof window !== "undefined") {
-				window.removeEventListener("message", onMessage)
-			}
-		}
-	}, [onMessage])
-
-	return null
 }

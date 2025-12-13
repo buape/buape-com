@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic"
 
 // import { Dot } from "lucide-react"
 import type { Metadata } from "next"
+import { draftMode } from "next/headers"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
@@ -16,9 +17,11 @@ export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
+	const { isEnabled: isDraftMode } = await draftMode()
 	const page = (
 		await payload.find({
 			collection: "buape-com-posts",
+			draft: isDraftMode,
 			where: {
 				slug: {
 					equals: params.slug

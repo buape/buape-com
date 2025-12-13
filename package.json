@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"@buape/cms-types": "^0.20251113.2",
-		"@payloadcms/live-preview": "^3.63.0",
+		"@payloadcms/live-preview-react": "^3.68.3",
 		"@payloadcms/richtext-lexical": "^3.63.0",
 		"@payloadcms/sdk": "^3.63.0",
 		"@radix-ui/react-slot": "1.2.3",
