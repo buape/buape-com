@@ -211,6 +211,20 @@ button {
 	.payload-richtext p {
 		@apply mb-4
 	}
+
+	picture img {
+		max-height: 600px;
+		width: auto;
+		@apply mx-auto
+	}
+
+	figure {
+		@apply mb-8 mt-8 text-center
+	}
+
+	figcaption {
+		@apply text-white/40 w-full text-center
+	}
 }
 
 @theme inline {
