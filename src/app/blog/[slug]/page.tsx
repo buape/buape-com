@@ -1,6 +1,6 @@
 // import { Dot } from "lucide-react"
 import type { Metadata } from "next"
-import { draftMode } from "next/headers"
+// import { draftMode } from "next/headers"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
@@ -15,7 +15,8 @@ export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
-	const { isEnabled: isDraftMode } = await draftMode()
+	// const { isEnabled: isDraftMode } = await draftMode()
+	const isDraftMode = true
 	const page = (
 		await payload.find({
 			collection: "buape-com-posts",
@@ -87,7 +88,7 @@ export default async function Page(props: {
 					</div>
 				</header>
 				<main className="w-screen bg-[#101013] py-20">
-					<div className="max-w-full flex flex-col gap-4 text-left px-12 md:px-24 lg:px-48 prose prose-lg text-white">
+					<div className="max-w-full flex flex-col text-left px-12 md:px-24 lg:px-48 prose prose-lg text-white">
 						<RichText data={page.content} />
 					</div>
 				</main>
@@ -100,7 +101,8 @@ export async function generateMetadata(props: {
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const params = await props.params
-	const { isEnabled: isDraftMode } = await draftMode()
+	// const { isEnabled: isDraftMode } = await draftMode()
+	const isDraftMode = true
 	const page = (
 		await payload.find({
 			collection: "buape-com-posts",

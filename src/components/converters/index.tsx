@@ -1,4 +1,3 @@
-import { htmlConverter } from "@buape/cms/components"
 import type {
 	DefaultNodeTypes,
 	SerializedBlockNode
@@ -7,6 +6,7 @@ import type { JSXConvertersFunction } from "@payloadcms/richtext-lexical/react"
 
 import { fileTreeConverter } from "./FileTreeConverter"
 import { headingConverter } from "./HeadingConverter"
+import { htmlConverter } from "./HtmlConverter"
 import { linkConverter } from "./LinkConverter"
 
 type NodeTypes = DefaultNodeTypes | SerializedBlockNode

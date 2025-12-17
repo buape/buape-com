@@ -12,6 +12,7 @@ button {
 @theme {
 	--color-dark: #17171c;
 	--color-buape: #3f4fab;
+	--color-buape-light: #a1a9d6;
 	--color-gray: #2e2e38;
 	--color-border: hsl(var(--border));
 	--color-input: hsl(var(--input));
@@ -204,7 +205,11 @@ button {
 	}
 
 	.link {
-		@apply text-buape hover:underline hover:text-buape/80;
+		@apply text-buape-light hover:underline hover:text-buape;
+	}
+
+	.payload-richtext p {
+		@apply mb-4
 	}
 }
 

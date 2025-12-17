@@ -3,7 +3,7 @@ import { Rubik } from "next/font/google"
 
 import "~/styles/globals.css"
 
-// import Script from "next/script"
+import Script from "next/script"
 import type { ReactNode } from "react"
 import { BreakpointIndicator } from "~/components/BreakpointIndicator"
 import { Toaster } from "~/components/ui/sonner"
@@ -43,6 +43,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					data-website-id="00ad4bee-f586-43a9-aa02-866d0a69ab1d"
 					data-domains="www.buape.com"
 				/> */}
+				<Script async src="https://platform.twitter.com/widgets.js" />
 			</body>
 		</html>
 	)
