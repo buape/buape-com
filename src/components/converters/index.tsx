@@ -1,3 +1,4 @@
+import { htmlConverter } from "@buape/cms/components"
 import type {
 	DefaultNodeTypes,
 	SerializedBlockNode
@@ -16,5 +17,6 @@ export const jsxConverter: JSXConvertersFunction<NodeTypes> = ({
 	...defaultConverters,
 	...headingConverter,
 	...linkConverter,
-	...fileTreeConverter
+	...fileTreeConverter,
+	...htmlConverter
 })
