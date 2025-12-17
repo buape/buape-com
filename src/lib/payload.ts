@@ -1,4 +1,4 @@
-import type { Config } from "@buape/cms-types"
+import type { Config } from "@buape/cms/types"
 import { PayloadSDK } from "@payloadcms/sdk"
 
 export const payload = new PayloadSDK<Config>({
