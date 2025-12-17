@@ -1,6 +1,6 @@
-// import { Dot } from "lucide-react"
+import { Dot } from "lucide-react"
 import type { Metadata } from "next"
-// import { draftMode } from "next/headers"
+import { draftMode } from "next/headers"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { createMetadata } from "~/app/createMetadata"
@@ -15,8 +15,7 @@ export default async function Page(props: {
 	params: Promise<{ slug: string }>
 }) {
 	const params = await props.params
-	// const { isEnabled: isDraftMode } = await draftMode()
-	const isDraftMode = true
+	const { isEnabled: isDraftMode } = await draftMode()
 	const page = (
 		await payload.find({
 			collection: "buape-com-posts",
@@ -51,7 +50,7 @@ export default async function Page(props: {
 		typeof page.author === "string" ? page.author : page.author.id
 	const author = staff.data.staff.find((x: { id: string }) => x.id === authorId)
 
-	// const publishedDate = new Date(page.publishedAt ?? page.createdAt)
+	const publishedDate = new Date(page.publishedAt ?? page.createdAt)
 
 	return (
 		<>
@@ -62,10 +61,10 @@ export default async function Page(props: {
 				)}
 			/>
 			<article className="relative flex size-full flex-col w-screen max-w-(--breakpoint-lg) min-h-dvh items-center justify-center container">
-				<header className="flex flex-col gap-10 items-center m-5 pb-5 mt-32 text-center">
-					<h1 className="text-3xl font-bold">{page.title}</h1>
-					<h2 className="text-xl font-bold">{page.description}</h2>
-					<div className="flex flex-row gap-2 items-center">
+				<header className="flex flex-col gap-6 items-center m-5 pb-5 mt-24 text-center">
+					<h1 className="text-3xl font-bold mb-0">{page.title}</h1>
+					<h2 className="text-xl font-bold mt-0">{page.description}</h2>
+					<div className="flex flex-row gap-2 items-center mt-8">
 						<Image
 							className="rounded-full"
 							src={
@@ -79,12 +78,12 @@ export default async function Page(props: {
 						<span className="text-lg font-bold">
 							{author?.username || authorId}
 						</span>
-						{/* <Dot width={32} height={32} />
+						<Dot width={32} height={32} />
 						<span className="text-lg font-bold">
 							{new Date(
 								publishedDate.valueOf() + publishedDate.getTimezoneOffset()
 							).toLocaleDateString()}
-						</span> */}
+						</span>
 					</div>
 				</header>
 				<main className="w-screen bg-[#101013] py-20">
@@ -101,8 +100,7 @@ export async function generateMetadata(props: {
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const params = await props.params
-	// const { isEnabled: isDraftMode } = await draftMode()
-	const isDraftMode = true
+	const { isEnabled: isDraftMode } = await draftMode()
 	const page = (
 		await payload.find({
 			collection: "buape-com-posts",
@@ -140,10 +138,9 @@ export async function generateMetadata(props: {
 
 	return createMetadata({
 		title: `Blog: ${page.title}`,
-		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)}`
-		//  on ${new Date(
-		// 	new Date(page.publishedAt ?? page.createdAt).valueOf() +
-		// 		new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
-		// ).toLocaleDateString()}`
+		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)} on ${new Date(
+			new Date(page.publishedAt ?? page.createdAt).valueOf() +
+				new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
+		).toLocaleDateString()}`
 	})
 }
