@@ -33,7 +33,14 @@ export default async function Page() {
 	const posts = (
 		await payload.find({
 			collection: "buape-com-posts",
-			draft: isDraftMode
+			draft: false,
+			where: !isDraftMode
+				? {
+						_status: {
+							equals: "published"
+						}
+					}
+				: undefined
 		})
 	).docs
 	// .sort(

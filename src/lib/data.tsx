@@ -43,7 +43,12 @@ export const sections: () => Promise<ContentSectionData[]> = async () => {
 		(
 			await payload.find({
 				collection: "buape-com-testimonials",
-				sort: "createdAt"
+				sort: "createdAt",
+				where: {
+					_status: {
+						equals: "published"
+					}
+				}
 			})
 		)?.docs || []
 	return [

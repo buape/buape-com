@@ -20,15 +20,28 @@ export default async function Page(props: {
 		await payload.find({
 			collection: "buape-com-posts",
 			draft: isDraftMode,
-			where: {
-				slug: {
-					equals: params.slug
-				}
-			}
+			where: !isDraftMode
+				? {
+						and: [
+							{
+								_status: {
+									equals: "published"
+								}
+							},
+							{
+								slug: {
+									equals: params.slug
+								}
+							}
+						]
+					}
+				: {
+						slug: {
+							equals: params.slug
+						}
+					}
 		})
 	).docs[0]
-
-	console.log(isDraftMode, page?.id)
 
 	if (!page) notFound()
 	const staff = await getStaff()
@@ -92,11 +105,26 @@ export async function generateMetadata(props: {
 		await payload.find({
 			collection: "buape-com-posts",
 			draft: isDraftMode,
-			where: {
-				slug: {
-					equals: params.slug
-				}
-			}
+			where: !isDraftMode
+				? {
+						and: [
+							{
+								_status: {
+									equals: "published"
+								}
+							},
+							{
+								slug: {
+									equals: params.slug
+								}
+							}
+						]
+					}
+				: {
+						slug: {
+							equals: params.slug
+						}
+					}
 		})
 	).docs[0]
 
