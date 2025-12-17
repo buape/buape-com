@@ -6,6 +6,7 @@ import { getStaff } from "~/lib/staff"
 import { createMetadata } from "./createMetadata"
 import { ContentSection, JoinTheTeam } from "./home/Content"
 import { Hero } from "./home/Hero"
+import { draftMode } from "next/headers"
 
 export const metadata = createMetadata({})
 
@@ -28,9 +29,11 @@ export default async function Page() {
 			marquee: true
 		})
 
+	const { isEnabled: isDraftMode } = await draftMode()
 	const posts = (
 		await payload.find({
-			collection: "buape-com-posts"
+			collection: "buape-com-posts",
+			draft: isDraftMode
 		})
 	).docs
 	// .sort(
