@@ -6,6 +6,14 @@ initOpenNextCloudflareForDev()
 const config = {
 	reactStrictMode: true,
 	transpilePackages: ["@buape/cms"],
+	rewrites: async () => {
+		return [
+			{
+				source: "/api/media/:path*",
+				destination: "https://cms.buape.com/api/media/:path*"
+			}
+		]
+	},
 	images: {
 		remotePatterns: [
 			{
