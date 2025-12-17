@@ -4,6 +4,7 @@ import type {
 } from "@payloadcms/richtext-lexical"
 import type { JSXConvertersFunction } from "@payloadcms/richtext-lexical/react"
 
+import { fileTreeConverter } from "./FileTreeConverter"
 import { headingConverter } from "./HeadingConverter"
 import { linkConverter } from "./LinkConverter"
 
@@ -14,5 +15,6 @@ export const jsxConverter: JSXConvertersFunction<NodeTypes> = ({
 }) => ({
 	...defaultConverters,
 	...headingConverter,
-	...linkConverter
+	...linkConverter,
+	...fileTreeConverter
 })

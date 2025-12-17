@@ -5,6 +5,7 @@ initOpenNextCloudflareForDev()
 /** @type {import("next").NextConfig} */
 const config = {
 	reactStrictMode: true,
+	transpilePackages: ["@buape/cms"],
 	images: {
 		remotePatterns: [
 			{
