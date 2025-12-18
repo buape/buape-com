@@ -59,9 +59,9 @@ export default async function Page() {
 						typeof post.author === "string" ? post.author : post.author.id
 					return x.id === authorId
 				})
-				const publishedDate = new Date(
-					post.publishedAt ?? post.createdAt ?? new Date()
-				)
+				const publishedDate = post.publishedAt
+					? new Date(post.publishedAt)
+					: undefined
 				return {
 					name: post.title,
 					body: post.description,
