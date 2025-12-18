@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { Button } from "~/components/ui/button"
 import Marquee from "~/components/ui/marquee"
-import { cn } from "~/lib/utils"
+import { cn, formatPublishedDate } from "~/lib/utils"
 
 type ContentCardData = {
 	name: string
@@ -165,7 +165,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 					</span>{" "}
 					{data.author.date ? (
 						<span className="text-sm text-gray-400">
-							{data.author.date.toLocaleDateString()}
+							{formatPublishedDate(data.author.date)}
 						</span>
 					) : null}
 				</div>

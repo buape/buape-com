@@ -9,7 +9,7 @@ import { RichText } from "~/components/RichText"
 import GridPattern from "~/components/ui/grid-pattern"
 import { payload } from "~/lib/payload"
 import { getStaff } from "~/lib/staff"
-import { cn } from "~/lib/utils"
+import { cn, formatPublishedDate } from "~/lib/utils"
 
 export default async function Page(props: {
 	params: Promise<{ slug: string }>
@@ -80,9 +80,7 @@ export default async function Page(props: {
 						</span>
 						<Dot width={32} height={32} />
 						<span className="text-lg font-bold">
-							{new Date(
-								publishedDate.valueOf() + publishedDate.getTimezoneOffset()
-							).toLocaleDateString()}
+							{formatPublishedDate(publishedDate)}
 						</span>
 					</div>
 				</header>
@@ -138,9 +136,9 @@ export async function generateMetadata(props: {
 
 	return createMetadata({
 		title: `Blog: ${page.title}`,
-		description: `${page.description}\n\nWritten by ${author?.username || (typeof page.author === "string" ? page.author : page.author.id)} on ${new Date(
-			new Date(page.publishedAt ?? page.createdAt).valueOf() +
-				new Date(page.publishedAt ?? page.createdAt).getTimezoneOffset()
-		).toLocaleDateString()}`
+		description: `${page.description}\n\nWritten by ${
+			author?.username ||
+			(typeof page.author === "string" ? page.author : page.author.id)
+		} on ${formatPublishedDate(new Date(page.publishedAt ?? page.createdAt))}`
 	})
 }

@@ -59,9 +59,9 @@ export default async function Page() {
 						typeof post.author === "string" ? post.author : post.author.id
 					return x.id === authorId
 				})
-				// const publishedDate = new Date(
-				// 	post.publishedAt ?? post.createdAt ?? new Date()
-				// )
+				const publishedDate = new Date(
+					post.publishedAt ?? post.createdAt ?? new Date()
+				)
 				return {
 					name: post.title,
 					body: post.description,
@@ -69,8 +69,8 @@ export default async function Page() {
 					author: author
 						? {
 								name: author.username!,
-								avatarUrl: author.avatarUrl!
-								// date: publishedDate
+								avatarUrl: author.avatarUrl!,
+								date: publishedDate
 							}
 						: undefined
 				}

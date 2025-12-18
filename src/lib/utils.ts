@@ -47,6 +47,16 @@ export const randomString = (length: number) =>
 		.toString(36)
 		.substring(2, length + 2)
 
+export const formatPublishedDate = (date: Date | string | number) => {
+	const parsedDate = date instanceof Date ? date : new Date(date)
+	return new Intl.DateTimeFormat("en-US", {
+		month: "long",
+		day: "numeric",
+		year: "numeric",
+		timeZone: "America/New_York"
+	}).format(parsedDate)
+}
+
 /**
  * Alphabetizes an array of objects by a key in that object using a type parameter
  * @param arr An array of objects, where each object has a key that is a string, and a value that is a string.
