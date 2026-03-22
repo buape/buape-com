@@ -11,6 +11,7 @@ import { projects } from "~/lib/data"
 import { cn } from "~/lib/utils"
 import { Footer } from "./home/Footer"
 import Navbar from "./Navbar"
+import { PostHogProvider } from "./providers"
 
 const font = Rubik({
 	subsets: ["latin"]
@@ -32,18 +33,20 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					font.className
 				)}
 			>
-				<Navbar />
-				<div className="pt-3 max-w-screen min-w-screen w-dvh">{children}</div>
-				<Footer projects={projects} />
-				<BreakpointIndicator />
-				<Toaster />
-				{/* <Script
-					defer
-					src="https://stats.b1.buape.com/script.js"
-					data-website-id="00ad4bee-f586-43a9-aa02-866d0a69ab1d"
-					data-domains="www.buape.com"
-				/> */}
-				<Script async src="https://platform.twitter.com/widgets.js" />
+				<PostHogProvider>
+					<Navbar />
+					<div className="pt-3 max-w-screen min-w-screen w-dvh">{children}</div>
+					<Footer projects={projects} />
+					<BreakpointIndicator />
+					<Toaster />
+					{/* <Script
+						defer
+						src="https://stats.b1.buape.com/script.js"
+						data-website-id="00ad4bee-f586-43a9-aa02-866d0a69ab1d"
+						data-domains="www.buape.com"
+					/> */}
+					<Script async src="https://platform.twitter.com/widgets.js" />
+				</PostHogProvider>
 			</body>
 		</html>
 	)
