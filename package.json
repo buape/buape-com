@@ -16,36 +16,39 @@
 	},
 	"dependencies": {
 		"@buape/cms": "0.20251217.4",
-		"@payloadcms/live-preview-react": "3.68.5",
-		"@payloadcms/richtext-lexical": "3.68.5",
-		"@payloadcms/sdk": "3.68.5",
-		"@radix-ui/react-slot": "1.2.3",
-		"@tailwindcss/typography": "0.5.16",
+		"@payloadcms/live-preview-react": "3.85.1",
+		"@payloadcms/richtext-lexical": "3.85.1",
+		"@payloadcms/sdk": "3.85.1",
+		"@radix-ui/react-slot": "1.3.0",
+		"@tailwindcss/typography": "0.5.20",
 		"@tailwindcss/vite": "4.3.1",
 		"class-variance-authority": "0.7.1",
-		"lucide-react": "0.534.0",
-		"posthog-js": "1.363.1",
-		"react": "19.1.1",
-		"react-dom": "19.1.1",
-		"react-icons": "5.5.0",
+		"lucide-react": "1.21.0",
+		"posthog-js": "1.392.0",
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
+		"react-icons": "5.6.0",
 		"react-router": "8.0.1",
 		"sonner": "2.0.7",
-		"zod": "4.0.14"
+		"zod": "4.4.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.1.3",
+		"@biomejs/biome": "2.5.0",
 		"@cloudflare/vite-plugin": "1.42.1",
 		"@cloudflare/workers-types": "4.20260623.1",
-		"@types/node": "24.1.0",
-		"@types/react": "19.1.9",
-		"@types/react-dom": "19.1.7",
+		"@types/node": "26.0.0",
+		"@types/react": "19.2.17",
+		"@types/react-dom": "19.2.3",
 		"@vitejs/plugin-react": "6.0.2",
 		"clsx": "2.1.1",
-		"tailwind-merge": "3.3.1",
-		"tailwindcss": "4.1.11",
-		"typescript": "5.8.3",
+		"tailwind-merge": "3.6.0",
+		"tailwindcss": "4.3.1",
+		"typescript": "6.0.3",
 		"vite": "8.0.16",
-		"wrangler": "4.26.1"
+		"wrangler": "4.103.0"
 	},
-	"packageManager": "bun@1.3.1"
+	"packageManager": "bun@1.3.11",
+	"engines": {
+		"node": ">=24"
+	}
 }

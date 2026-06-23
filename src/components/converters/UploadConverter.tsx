@@ -1,18 +1,15 @@
 /** biome-ignore-all lint/performance/noImgElement: <cms> */
 import type { SerializedUploadNode } from "@payloadcms/richtext-lexical"
 import type { JSXConverters } from "@payloadcms/richtext-lexical/react"
-import type { UploadDataImproved } from "node_modules/@payloadcms/richtext-lexical/dist/features/upload/server/nodes/UploadNode"
 import type { FileData, FileSizeImproved, TypeWithID } from "payload"
 
 export const UploadJSXConverter: JSXConverters<SerializedUploadNode> = {
 	upload: ({ node }) => {
-		// TO-DO (v4): SerializedUploadNode should use UploadData_P4
-		const uploadNode = node as UploadDataImproved
-		if (typeof uploadNode.value !== "object") {
+		if (typeof node.value !== "object" || !node.value) {
 			return null
 		}
 
-		const uploadDoc = uploadNode.value as unknown as FileData &
+		const uploadDoc = node.value as unknown as FileData &
 			TypeWithID & { caption: string }
 
 		const url = uploadDoc.url

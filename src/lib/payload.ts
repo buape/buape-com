@@ -1,7 +1,7 @@
 import type { Config } from "@buape/cms/types"
 import { PayloadSDK } from "@payloadcms/sdk"
 
-export const payload = new PayloadSDK<Config>({
+export const payload = new PayloadSDK<Config & { fallbackLocale: null }>({
 	baseURL: "https://cms.buape.com/api",
 	baseInit: {
 		headers: {
