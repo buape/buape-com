@@ -23,7 +23,7 @@
 		"@tailwindcss/typography": "0.5.16",
 		"@tailwindcss/vite": "4.3.1",
 		"class-variance-authority": "0.7.1",
-		"lucide-react": "0.534.0",
+		"lucide-react": "0.577.0",
 		"posthog-js": "1.363.1",
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
