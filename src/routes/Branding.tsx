@@ -1,8 +1,5 @@
-import "./styles.css"
-import type { Metadata } from "next"
-import Image from "next/image"
+import "./branding.css"
 import type { ReactNode } from "react"
-import { createMetadata } from "~/app/createMetadata"
 import { ClickToCopy } from "~/components/ClickToCopy"
 import {
 	Card,
@@ -36,7 +33,7 @@ function LogoCard(data: LogoData) {
 			<CardContent className="flex flex-col items-center justify-center gap-2">
 				{"src" in data && (
 					<ClickToCopy toCopy={data.src}>
-						<Image
+						<img
 							src={data.src}
 							alt={data.alt}
 							width={data.width ?? 120}
@@ -79,11 +76,6 @@ function LogoSection({
 		</>
 	)
 }
-
-export const metadata: Metadata = createMetadata({
-	title: "Branding Guide",
-	description: "Last updated: October 25, 2025"
-})
 
 export default function BrandingPage() {
 	return (

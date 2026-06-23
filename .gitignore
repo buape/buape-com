@@ -12,13 +12,13 @@
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
 
-# next.js
-/.next/
-/out/
-next-env.d.ts
-
-# production
+# framework output
+/dist
+/out
 /build
+/.wrangler
+/.pi
+/.claude
 
 # misc
 .DS_Store
@@ -45,5 +45,3 @@ yarn-error.log*
 .sentryclirc
 
 node_modules
-.worker-next
-.open-next

@@ -1,14 +1,13 @@
-"use client"
 import { RefreshRouteOnSave as PayloadLivePreview } from "@payloadcms/live-preview-react"
-import { useRouter } from "next/navigation.js"
+import { useRevalidator } from "react-router"
 
 export const RefreshRouteOnSave = () => {
-	const router = useRouter()
+	const revalidator = useRevalidator()
 
 	return (
 		<PayloadLivePreview
-			refresh={() => router.refresh()}
-			serverURL={"https://cms.buape.com/admin"}
+			refresh={() => revalidator.revalidate()}
+			serverURL="https://cms.buape.com/admin"
 		/>
 	)
 }

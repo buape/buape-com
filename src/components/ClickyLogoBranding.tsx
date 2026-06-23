@@ -1,28 +1,25 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { useNavigate } from "react-router"
 
 export function ClickyLogoBranding() {
-	const router = useRouter()
-	const handleContextMenu = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault()
-		router.push("/branding")
-	}
+	const navigate = useNavigate()
+
 	return (
-		<Link
+		<a
 			className="order-1 flex flex-row grow items-center gap-2"
-			href={"/"}
-			onContextMenu={handleContextMenu}
+			href="/"
+			onContextMenu={(e) => {
+				e.preventDefault()
+				navigate("/branding")
+			}}
 		>
-			<Image
-				src={"https://cdn.buape.com/buape_circle.png"}
+			<img
+				src="https://cdn.buape.com/buape_circle.png"
 				width={24}
 				height={24}
-				alt={"Buape Logo"}
+				alt="Buape Logo"
 				className="h-6 w-6"
 			/>
 			<span className="text-white text-lg font-bold">Buape Studios</span>
-		</Link>
+		</a>
 	)
 }

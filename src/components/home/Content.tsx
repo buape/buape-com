@@ -1,7 +1,5 @@
 import type { ClassValue } from "clsx"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
 import type { ReactNode } from "react"
 import { Button } from "~/components/ui/button"
 import Marquee from "~/components/ui/marquee"
@@ -86,21 +84,21 @@ export function JoinTheTeam() {
 					portfolio. Join the team today!
 				</div>
 				<div className="flex md:flex-row flex-col md:gap-10 gap-2 justify-center items-center">
-					<Link href={"https://go.buape.com/apply"} className="w-56">
+					<a href={"https://go.buape.com/apply"} className="w-56">
 						<Button variant={"default"} className="w-full">
 							Apply to join us
 						</Button>
-					</Link>
-					<Link href={"https://go.buape.com/project"} className="w-56">
+					</a>
+					<a href={"https://go.buape.com/project"} className="w-56">
 						<Button variant={"default"} className="w-full">
 							Submit a project
 						</Button>
-					</Link>
-					<Link href={"https://discord.gg/7MUYugRj2T"} className="w-56">
+					</a>
+					<a href={"https://discord.gg/7MUYugRj2T"} className="w-56">
 						<Button variant={"outline"} className="w-full">
 							Join Us on Discord
 						</Button>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -109,7 +107,7 @@ export function JoinTheTeam() {
 
 function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 	return (
-		<Link
+		<a
 			className={cn(
 				"grow p-4 bg-dark rounded-xl border-gray border flex-col flex gap-4 shrink-0 basis-0 w-80 min-w-80 max-w-xl",
 				data.className || ""
@@ -118,7 +116,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 		>
 			<div className="flex flex-row gap-2 items-center order-first">
 				{data.icon ? (
-					<Image
+					<img
 						src={data.icon}
 						width={64}
 						height={64}
@@ -150,7 +148,7 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 				</div>
 			) : data.author ? (
 				<div className="text-sm text-nowrap overflow-clip whitespace-nowrap flex flex-row align-bottom items-center">
-					<Image
+					<img
 						src={
 							data.author.avatarUrl || "https://cdn.buape.com/buape_circle.png"
 						}
@@ -158,7 +156,6 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 						height={64}
 						alt={`${data.author.name}'s Avatar`}
 						className="w-6 h-6 rounded-full mr-2"
-						unoptimized={data.author.avatarUrl?.endsWith(".gif")}
 					/>
 					<span className="text-white font-bold grow w-full text-left">
 						{data.author.name}
@@ -170,6 +167,6 @@ function ContentCard(data: ContentCardData & { className?: ClassValue }) {
 					) : null}
 				</div>
 			) : null}
-		</Link>
+		</a>
 	)
 }

@@ -1,5 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "~/components/ui/button"
 
 import GridPattern from "~/components/ui/grid-pattern"
@@ -20,9 +18,8 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 				)}
 			/>
 			<div className="relative flex size-full flex-col w-screen max-w-(--breakpoint-lg) h-dvh items-center justify-center container sm:mt-0 mt-32">
-				<Image
+				<img
 					src={"https://cdn.buape.com/buape_circle.png"}
-					priority={true}
 					width={256}
 					height={256}
 					alt={"Buape Logo"}
@@ -36,23 +33,23 @@ export function Hero({ showBlog }: { showBlog: boolean }) {
 					the <span className="font-bold"> next generation</span> of developers.
 				</div>
 				<div className="flex md:flex-row flex-col md:gap-6 gap-2 my-12 mb-64 md:mb-12">
-					<Link href={"#projects"} className="w-56">
+					<a href={"#projects"} className="w-56">
 						<Button variant={"default"} className="w-full">
 							Our Projects
 						</Button>
-					</Link>
+					</a>
 					{showBlog ? (
-						<Link href={"#blog"} className="w-56">
+						<a href={"#blog"} className="w-56">
 							<Button variant={"default"} className="w-full">
 								Our Blog
 							</Button>
-						</Link>
+						</a>
 					) : null}
-					<Link href={"https://discord.gg/bgASSujRMj"} className="w-56">
+					<a href={"https://discord.gg/bgASSujRMj"} className="w-56">
 						<Button variant={"outline"} className="w-full">
 							Join Us on Discord
 						</Button>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</>

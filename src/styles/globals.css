@@ -146,6 +146,7 @@ button {
 		@apply bg-background text-foreground;
 		background-color: #101013;
 		color: white;
+		font-family: "Rubik", sans-serif;
 	}
 
 	h1 {
@@ -209,21 +210,21 @@ button {
 	}
 
 	.payload-richtext p {
-		@apply mb-4
+		@apply mb-4;
 	}
 
 	picture img {
 		max-height: 600px;
 		width: auto;
-		@apply mx-auto
+		@apply mx-auto;
 	}
 
 	figure {
-		@apply mb-8 mt-8 text-center
+		@apply mb-8 mt-8 text-center;
 	}
 
 	figcaption {
-		@apply text-white/40 w-full text-center
+		@apply text-white/40 w-full text-center;
 	}
 }
 
