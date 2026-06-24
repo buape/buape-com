@@ -5,37 +5,37 @@
     "": {
       "name": "buape-com",
       "dependencies": {
-        "@buape/cms": "latest",
-        "@payloadcms/live-preview-react": "latest",
-        "@payloadcms/richtext-lexical": "latest",
-        "@payloadcms/sdk": "latest",
-        "@radix-ui/react-slot": "latest",
-        "@tailwindcss/typography": "latest",
-        "@tailwindcss/vite": "latest",
-        "class-variance-authority": "latest",
-        "lucide-react": "latest",
-        "posthog-js": "latest",
-        "react": "latest",
-        "react-dom": "latest",
-        "react-icons": "latest",
-        "react-router": "latest",
-        "sonner": "latest",
-        "zod": "latest",
+        "@buape/cms": "0.20251217.4",
+        "@payloadcms/live-preview-react": "3.85.1",
+        "@payloadcms/richtext-lexical": "3.85.1",
+        "@payloadcms/sdk": "3.85.1",
+        "@radix-ui/react-slot": "1.3.0",
+        "@tailwindcss/typography": "0.5.20",
+        "@tailwindcss/vite": "4.3.1",
+        "class-variance-authority": "0.7.1",
+        "lucide-react": "1.21.0",
+        "posthog-js": "1.392.0",
+        "react": "19.2.7",
+        "react-dom": "19.2.7",
+        "react-icons": "5.6.0",
+        "react-router": "8.0.1",
+        "sonner": "2.0.7",
+        "zod": "4.4.3",
       },
       "devDependencies": {
-        "@biomejs/biome": "latest",
-        "@cloudflare/vite-plugin": "latest",
-        "@cloudflare/workers-types": "latest",
-        "@types/node": "latest",
-        "@types/react": "latest",
-        "@types/react-dom": "latest",
-        "@vitejs/plugin-react": "latest",
-        "clsx": "latest",
-        "tailwind-merge": "latest",
-        "tailwindcss": "latest",
-        "typescript": "latest",
-        "vite": "latest",
-        "wrangler": "latest",
+        "@biomejs/biome": "2.5.0",
+        "@cloudflare/vite-plugin": "1.42.1",
+        "@cloudflare/workers-types": "4.20260623.1",
+        "@types/node": "26.0.1",
+        "@types/react": "19.2.17",
+        "@types/react-dom": "19.2.3",
+        "@vitejs/plugin-react": "6.0.2",
+        "clsx": "2.1.1",
+        "tailwind-merge": "3.6.0",
+        "tailwindcss": "4.3.1",
+        "typescript": "6.0.3",
+        "vite": "8.0.16",
+        "wrangler": "4.103.0",
       },
     },
   },
@@ -478,7 +478,7 @@
 
     "@types/ms": ["@types/ms@2.1.0", "", {}, "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA=="],
 
-    "@types/node": ["@types/node@26.0.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA=="],
+    "@types/node": ["@types/node@26.0.1", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-fc3KiUoBt6kie0N9bIW3E47vZsuaMf0PM2AaUpLCLT0s/LvX1nxAim6Fc049cNxODPpGm6qRAuUOB86SkRuPQw=="],
 
     "@types/parse-json": ["@types/parse-json@4.0.2", "", {}, "sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw=="],
 
@@ -1136,11 +1136,17 @@
 
     "@types/busboy/@types/node": ["@types/node@24.1.0", "", { "dependencies": { "undici-types": "7.8.0" } }, "sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w=="],
 
+    "@types/ws/@types/node": ["@types/node@26.0.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA=="],
+
     "anymatch/picomatch": ["picomatch@2.3.1", "", {}, "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="],
+
+    "buffer-image-size/@types/node": ["@types/node@26.0.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA=="],
 
     "dom-helpers/csstype": ["csstype@3.1.3", "", {}, "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw=="],
 
     "error-ex/is-arrayish": ["is-arrayish@0.2.1", "", {}, "sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg=="],
+
+    "happy-dom/@types/node": ["@types/node@26.0.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-vf2YFi1iY9lHGwNJMs01biZFbKJkrZR1T6/MlzjhJLPdntOHLhTrDSnSVcdtvjihi4VQNlrFRIxLsDBlQpAipA=="],
 
     "json-schema-to-typescript/tinyglobby": ["tinyglobby@0.2.14", "", { "dependencies": { "fdir": "6.4.6", "picomatch": "4.0.3" } }, "sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ=="],
 
