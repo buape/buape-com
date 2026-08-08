@@ -171,37 +171,37 @@ export default function BrandingPage() {
 						logos={[
 							{
 								title: "Logo",
-								src: "https://cdn.buape.com/kiai/logo.png",
+								src: "https://cdn.kiai.app/logo.png",
 								alt: "Kiai Logo",
 								description: "The primary logo for most use cases"
 							},
 							{
 								title: "Logo Transparent",
-								src: "https://cdn.buape.com/kiai/logo_transparent.png",
+								src: "https://cdn.kiai.app/logo_transparent.png",
 								alt: "Kiai Logo Transparent"
 							},
 							{
 								title: "Banner",
-								src: "https://cdn.buape.com/kiai/banner.png",
+								src: "https://cdn.kiai.app/banner.png",
 								alt: "Kiai Banner",
 								width: 300
 							},
 							{
 								title: "Banner Transparent",
-								src: "https://cdn.buape.com/kiai/banner_transparent.png",
+								src: "https://cdn.kiai.app/banner_transparent.png",
 								alt: "Kiai Banner Transparent",
 								width: 300
 							},
 							{
 								title: "Banner Black",
-								src: "https://cdn.buape.com/kiai/banner_black.png",
+								src: "https://cdn.kiai.app/banner_black.png",
 								alt: "Kiai Banner Black",
 								description: "Black outline on lettering",
 								width: 300
 							},
 							{
 								title: "Banner Black Transparent",
-								src: "https://cdn.buape.com/kiai/banner_black_transparent.png",
+								src: "https://cdn.kiai.app/banner_black_transparent.png",
 								alt: "Kiai Banner Black Transparent",
 								width: 300
 							},
