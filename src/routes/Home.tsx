@@ -1,3 +1,4 @@
+import Markdown from "react-markdown"
 import { useLoaderData } from "react-router"
 import {
 	ContentSection,
@@ -5,16 +6,27 @@ import {
 	JoinTheTeam
 } from "~/components/home/Content"
 import { Hero } from "~/components/home/Hero"
-import { getPosts, getStaff, getTestimonials } from "~/lib/api"
+import { getStaff } from "~/lib/api"
 import { projects } from "~/lib/data"
+import { docket } from "~/lib/docket"
 
 export async function homeLoader() {
 	const [staffList, testimonials, posts] = await Promise.all([
 		getStaff().catch(() => undefined),
-		getTestimonials().catch(() => []),
-		getPosts().catch(() => [])
+		docket
+			.GET("/api/content/{slug}", { path: { slug: "testimonials" } })
+			.then(({ data }) => data?.entries ?? [])
+			.catch(() => []),
+		docket
+			.GET("/api/content/{slug}", { path: { slug: "blog" } })
+			.then(({ data }) => data?.entries ?? [])
+			.catch(() => [])
 	])
 
+	testimonials.sort(
+		(a, b) =>
+			Number(a.frontmatter.order ?? 0) - Number(b.frontmatter.order ?? 0)
+	)
 	return { staffList, testimonials, posts }
 }
 
@@ -36,14 +48,24 @@ export default function Home() {
 			description: `1,200+ communities, 1,100,000+ users.
 But don’t just take our word for it, hear from some of our users on what they have to say about Buape Studios:`,
 			cards: testimonials.map((x) => ({
-				name: x.name,
-				body: x.body,
+				name: x.title,
+				body: (
+					<Markdown components={{ p: ({ children }) => <>{children}</> }}>
+						{x.body}
+					</Markdown>
+				),
 				icon:
-					typeof x.icon === "object" && x.icon.url
-						? `https://cms.buape.com${x.icon.url}`
+					typeof x.frontmatter.icon === "string"
+						? x.frontmatter.icon
 						: undefined,
-				link: x.link,
-				linkBottomText: x.linkBottomText
+				link:
+					typeof x.frontmatter.link === "string"
+						? x.frontmatter.link
+						: undefined,
+				linkBottomText:
+					typeof x.frontmatter.linkBottomText === "string"
+						? x.frontmatter.linkBottomText
+						: undefined
 			}))
 		}
 	]
@@ -68,27 +90,21 @@ But don’t just take our word for it, hear from some of our users on what they 
 			id: "blog",
 			title: "Our Blog",
 			description: "Check out our blog for the latest news and updates.",
-			cards: posts.map((post) => {
-				const authorId =
-					typeof post.author === "string" ? post.author : post.author.id
-				const author = staffList?.data.staff.find((x) => x.id === authorId)
-				const publishedDate = post.publishedAt
-					? new Date(post.publishedAt)
+			cards: posts.map((post) => ({
+				name: post.title,
+				body:
+					typeof post.frontmatter.description === "string"
+						? post.frontmatter.description
+						: "",
+				link: `/blog/${post.slug}`,
+				author: post.author
+					? {
+							name: post.author.name,
+							avatarUrl: post.author.picture || "",
+							date: new Date(post.publishedAt)
+						}
 					: undefined
-
-				return {
-					name: post.title,
-					body: post.description ?? "",
-					link: `/blog/${post.slug}`,
-					author: author
-						? {
-								name: author.username || author.id,
-								avatarUrl: author.avatarUrl || "",
-								date: publishedDate
-							}
-						: undefined
-				}
-			})
+			}))
 		})
 	}
 

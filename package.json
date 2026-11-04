@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"@buape/cms": "0.20251217.4",
+		"@buape/docket": "0.1.0",
 		"@payloadcms/live-preview-react": "3.85.1",
 		"@payloadcms/richtext-lexical": "3.85.1",
 		"@payloadcms/sdk": "3.85.1",
@@ -28,7 +29,9 @@
 		"react": "19.2.7",
 		"react-dom": "19.2.7",
 		"react-icons": "5.6.0",
+		"react-markdown": "^10.1.0",
 		"react-router": "8.0.1",
+		"remark-gfm": "^4.0.1",
 		"sonner": "2.0.7",
 		"zod": "4.4.3"
 	},

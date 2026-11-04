@@ -1,3 +1,4 @@
+import { docket } from "~/lib/docket"
 import { payload } from "~/lib/payload"
 
 type Env = {
@@ -70,8 +71,36 @@ async function pageMetadata(request: Request, url: URL): Promise<PageMetadata> {
 		}
 	}
 
+	if (url.pathname === "/old-blog") return { title: "Blog archive" }
+	const docketBlogMatch = url.pathname.match(/^\/blog\/([^/]+)$/)
+	if (docketBlogMatch?.[1]) {
+		const { data, response } = await docket.GET(
+			"/api/content/{slug}/{entrySlug}",
+			{
+				path: {
+					slug: "blog",
+					entrySlug: decodeURIComponent(docketBlogMatch[1])
+				}
+			}
+		)
+		if (!response.ok || !data) return {}
+		const date = new Intl.DateTimeFormat("en-US", {
+			month: "long",
+			day: "numeric",
+			year: "numeric",
+			timeZone: "America/New_York"
+		}).format(new Date(data.publishedAt))
+		const description =
+			typeof data.frontmatter.description === "string"
+				? data.frontmatter.description
+				: ""
+		return {
+			title: `Blog: ${data.title}`,
+			description: `${description}\n\nWritten by ${data.author?.name || "Buape"} on ${date}`
+		}
+	}
 	const draft = draftEnabled(request)
-	const blogMatch = url.pathname.match(/^\/blog\/([^/]+)$/)
+	const blogMatch = url.pathname.match(/^\/old-blog\/([^/]+)$/)
 	if (blogMatch?.[1]) {
 		const post = (
 			await payload.find({
@@ -115,8 +144,28 @@ async function pageMetadata(request: Request, url: URL): Promise<PageMetadata> {
 		}
 	}
 
-	const slug = decodeURIComponent(url.pathname.slice(1))
+	const legacyPage = url.pathname.startsWith("/old-pages/")
+	const slug = decodeURIComponent(
+		url.pathname.slice(legacyPage ? "/old-pages/".length : 1)
+	)
 	if (!slug || slug.includes("/")) return {}
+	if (!legacyPage) {
+		const { data, response } = await docket.GET(
+			"/api/content/{slug}/{entrySlug}",
+			{
+				path: { slug: "pages", entrySlug: slug }
+			}
+		)
+		return response.ok && data
+			? {
+					title: data.title,
+					description:
+						typeof data.frontmatter.description === "string"
+							? data.frontmatter.description
+							: " "
+				}
+			: {}
+	}
 
 	const page = (
 		await payload.find({
@@ -146,7 +195,7 @@ async function withMetadata(request: Request, env: Env) {
 
 	return new Response(
 		html
-			.replace("<!--buape-metadata-->\n\t\t<title>Buape Studios</title>", tags)
+			.replace("<title>Buape Studios</title>", "")
 			.replace("<!--buape-metadata-->", tags),
 		{
 			status: response.status,
@@ -243,7 +292,8 @@ async function preview(env: Env, url: URL) {
 	return new Response(null, {
 		status: 302,
 		headers: {
-			location: type === "post" ? `/blog/${doc.slug}` : `/${doc.slug}`,
+			location:
+				type === "post" ? `/old-blog/${doc.slug}` : `/old-pages/${doc.slug}`,
 			"set-cookie": "buape_draft=1; Path=/; Max-Age=3600; SameSite=Lax; Secure"
 		}
 	})
