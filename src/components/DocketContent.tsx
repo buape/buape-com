@@ -7,7 +7,7 @@ import type { DocketEntry } from "~/components/DocketEntry"
 
 export function DocketContent({ entry }: { entry: DocketEntry }) {
 	return (
-		<div className="payload-richtext">
+		<div className="docket-content">
 			<Markdown
 				remarkPlugins={[remarkGfm]}
 				components={{

@@ -18,5 +18,5 @@
 		},
 		"types": ["@cloudflare/workers-types", "vite/client"]
 	},
-	"include": ["worker", "src/lib/payload.ts"]
+	"include": ["worker"]
 }

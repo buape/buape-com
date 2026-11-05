@@ -209,7 +209,7 @@ button {
 		@apply text-buape-light hover:underline hover:text-buape;
 	}
 
-	.payload-richtext p {
+	.docket-content p {
 		@apply mb-4;
 	}
 
